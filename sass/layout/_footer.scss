@@ -16,10 +16,17 @@
         padding-right: 2em; //permettre un espace entre chaque lien
 
 
+
+
+
         a {
           text-decoration: none; //enlever les sous titres par défault
           color: $darkestgreen; //couleur du texte en vert foncé
           font-size: 18px;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

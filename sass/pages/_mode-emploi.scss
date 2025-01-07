@@ -6,31 +6,33 @@
 
 
 .main-scndpage {
-  height: 80%;
+  height: 20%;
   border: 1px solid red;
   display: flex;
-  justify-content: space-evenly;
-  padding: 5em 0em;
+  justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
+  padding: 5em 0em; // padding en haut et en bas
 
   &__bloc {
     border: 1px solid yellow;
-    margin: 0em 8em;
-    height: 80em;
+    margin: 0em 2em; // espace entre les 3 blocs
+    height: 40em;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; // avoir les élements des blocs centrés dans chaque bloc horizontalement
+    justify-content: center; // avoir les élements des blocs centrés dans chaque bloc verticalement
 
-
-
-
+    p {
+      text-align: center; // pas pris en compte dans le align-item au dessus, commande séparée pour le même résultat
+    }
 
     &--leftbloc {
       border: 1px solid blue;
     }
 
     &--middlebloc {
-      border: 1px solid blue;
-
+      border: 1px solid transparent;
+      border-radius: 2em;
+      box-shadow: 0px 0px 10px lightgray;
 
     }
 
