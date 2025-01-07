@@ -56,3 +56,10 @@
         font-size: 18px;
     }
 
+    /* Style pour les champs de texte avec bordure en bas */
+.bottom-border {
+  border: none; /* Supprime toutes les bordures */
+  border-bottom: 2px solid #ccc; /* Ajoute une bordure en bas */
+  color: grayscale(50%);
+}
+
