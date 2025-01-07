@@ -13,8 +13,10 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  border-top: 1px solid #79C258;
 }
 .footer__nav__ul {
+  font-family: "Montserrat";
   list-style-type: none;
   border: 1px solid green;
   display: flex;
@@ -24,6 +26,10 @@ p {
 .footer__nav__ul li {
   border: 1px solid blue;
   padding-right: 1em;
+}
+.footer__nav__ul li a {
+  text-decoration: none;
+  color: #019961;
 }
 
 header {
