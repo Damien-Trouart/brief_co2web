@@ -1,1 +1,30 @@
-/*# sourceMappingURL=main.css.map */
+h1 {
+  font-family: "Monserrat Semi Bold";
+  font-size: inherit;
+}
+
+p {
+  font-family: "Roboto regular";
+  font-size: large(18px);
+}
+
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.header__nav {
+  border: 1px solid red;
+  display: flex;
+  list-style-type: none;
+}
+.header__nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.header__nav ul li,
+.header__nav ul a {
+  text-decoration: none;
+  color: #3dad5c;
+}/*# sourceMappingURL=main.css.map */
