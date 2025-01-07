@@ -1,0 +1,62 @@
+h1 {
+  font-family: "Monserrat Semi Bold";
+  font-size: inherit;
+}
+
+p {
+  font-family: "Roboto regular";
+  font-size: large(18px);
+}
+
+.footer {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-top: 1px solid #79C258;
+}
+.footer__nav__ul {
+  font-family: "Montserrat";
+  list-style-type: none;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.footer__nav__ul li {
+  border: 1px solid blue;
+  padding-right: 1em;
+}
+.footer__nav__ul li a {
+  text-decoration: none;
+  color: #019961;
+}
+
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 5%;
+}
+header .header__logo {
+  height: 50%;
+  width: auto;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+.header__nav ul li,
+.header__nav ul a {
+  text-decoration: none;
+  color: #3dad5c;
+}/*# sourceMappingURL=main.css.map */

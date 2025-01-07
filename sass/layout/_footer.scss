@@ -3,10 +3,12 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
+  border-top: 1px solid $lightgreen;
 
   &__nav {
 
     &__ul {
+      font-family: "Montserrat";
       list-style-type: none;
       border: 1px solid green;
       display: flex;
@@ -16,6 +18,12 @@
       & li {
         border: 1px solid blue;
         padding-right: 1em;
+
+
+        a {
+          text-decoration: none;
+          color: $darkestgreen;
+        }
       }
     }
   }
