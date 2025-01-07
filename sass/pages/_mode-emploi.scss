@@ -1,29 +1,32 @@
 .title-scndpage {
   h1 {
-    font-size: 5em;
+    font-size: 4rem;
   }
 }
-
-
 
 .main-scndpage {
   display: flex;
   justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
-  padding: 5em 0em; // padding en haut et en bas
+  padding: 5rem 0rem; // padding en haut et en bas
 
   &__bloc {
     @include bloc_mode-emploi;
 
     p {
       text-align: center; // pas pris en compte dans le align-item au dessus, commande séparée pour le même résultat
+      padding: 0rem 1rem;
+    }
+
+    h2 {
+      padding: 1rem 0rem;
     }
 
     &--leftbloc {}
 
     &--middlebloc {
-      border: 1px solid transparent;
-      border-radius: 2em;
-      box-shadow: 0px 0px 10px lightgray;
+      border: 1em solid transparent;
+      border-radius: 2rem;
+      box-shadow: 0px 0px 1rem lightgray;
 
     }
 
