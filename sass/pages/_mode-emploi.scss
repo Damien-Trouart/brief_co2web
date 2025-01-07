@@ -1,11 +1,18 @@
+.title-scndpage {
+  height: 20%;
+}
+
+
+
 .main-scndpage {
+  height: 80%;
   border: 1px solid red;
   display: flex;
   justify-content: space-evenly;
 
   &__bloc {
     border: 1px solid yellow;
-    margin: 0em 2em;
+    margin: 0em 8em;
 
 
 
