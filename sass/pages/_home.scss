@@ -1,3 +1,32 @@
-.container__main {
-  display: flex;
+.section__main {
+  padding: 0em 3em;
+
+  .container__main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .div__main__left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: xx-large;
+    }
+
+    .btn__position {
+      display: flex;
+      flex-direction: row;
+
+      .div__main__right {
+        width: 50%;
+
+        img {
+          width: 20px;
+          height: auto;
+        }
+      }
+    }
+  }
 }
