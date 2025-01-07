@@ -34,6 +34,10 @@ header {
   height: 80px;
   padding: 0 5%;
 }
+header .header__logo {
+  height: 50%;
+  width: auto;
+}
 
 .header__nav {
   display: flex;
