@@ -2,9 +2,14 @@
   display: flex;
   justify-content: end; //avoir la liste de liens à droite
   border-top: 1px solid $lightgreen; //barre verte claire au dessu de la nav
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
   &__nav {
-    padding: 1em 0em; // permettre un espace au dessus et dessous de la nav
+
+    padding: 1rem 0em; // permettre un espace au dessus et dessous de la nav
 
     &__ul {
       font-family: "Roboto";
@@ -13,7 +18,7 @@
       flex-direction: row; // avoir la liste de liens horizontalement
 
       & li {
-        padding-right: 2em; //permettre un espace entre chaque lien
+        padding-right: 2rem; //permettre un espace entre chaque lien
 
 
 
@@ -22,7 +27,7 @@
         a {
           text-decoration: none; //enlever les sous titres par défault
           color: $darkestgreen; //couleur du texte en vert foncé
-          font-size: 18px;
+          font-size: 1.5rem;
 
           &:hover {
             text-decoration: underline;
