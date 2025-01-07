@@ -1,4 +1,5 @@
 .title-scndpage {
+  border: 1px solid green;
   height: 20%;
 }
 
@@ -9,14 +10,18 @@
   border: 1px solid red;
   display: flex;
   justify-content: space-evenly;
+  padding: 5em 0em;
 
   &__bloc {
     border: 1px solid yellow;
     margin: 0em 8em;
+    height: 80em;
 
 
 
-    &--leftbloc {}
+    &--leftbloc {
+      border: 1px solid blue;
+    }
 
     &--middlebloc {}
 
