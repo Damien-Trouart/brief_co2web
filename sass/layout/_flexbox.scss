@@ -4,9 +4,13 @@ body {
   height: 100%;
   width: 100%;
 
-  header {}
+  header {
+  }
 
-  main {}
+  main {
+    margin-top: $margin_header;
+  }
 
-  footer {}
+  footer {
+  }
 }
