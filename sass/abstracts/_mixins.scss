@@ -1,0 +1,9 @@
+@mixin bloc_mode-emploi {
+  box-sizing: border-box;
+  height: 40em;
+  width: 35em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // avoir les élements des blocs centrés horizontalement
+  justify-content: center; // avoir les élements des blocs centrés verticalement
+}
