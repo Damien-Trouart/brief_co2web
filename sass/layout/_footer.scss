@@ -2,8 +2,8 @@
   display: flex;
   justify-content: end; //avoir la liste de liens à droite
   border-top: 1px solid $lightgreen; //barre verte claire au dessu de la nav
-  position: fixed;
-  bottom: 0;
+  position: fixed; //footer bloqué
+  bottom: 0; //footer bloqué en bas
   right: 0;
   left: 0;
 
