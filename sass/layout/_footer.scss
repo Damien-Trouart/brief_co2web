@@ -9,8 +9,8 @@
   left: 0;
 
   @media(max-width: 360px) {
-    justify-content: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
   }
 
 
@@ -21,6 +21,9 @@
 
     @media(max-width: 360px) {
       color: black;
+      font-family: "Montserrat";
+      font-weight: 200;
+      margin: 0;
     }
   }
 
@@ -31,18 +34,29 @@
   &__nav {
     padding: 1rem 0em; // permettre un espace au dessus et dessous de la nav
 
+    @media(max-width: 360px) {
+      padding: 0;
+    }
+
+
     &__ul {
       font-family: "Roboto";
-      list-style-type: none; // enlever les points de liste par défault
+      list-style-type: none;
       display: flex;
-      flex-flow: row wrap; // avoir la liste de liens horizontalement
+      flex-flow: row wrap; // avoir la liste de liens horizontalement qui déroulent pour version mobile
+
+      @media(max-width: 360px) {
+        padding: 0;
+        margin: 0;
+      }
 
       & li {
         padding-right: 2rem; //permettre un espace entre chaque lien
 
+
         a {
-          text-decoration: none; //enlever les sous titres par défault
-          color: $darkestgreen; //couleur du texte en vert foncé
+          text-decoration: none;
+          color: $darkestgreen;
           font-size: 1.5rem;
 
           @media(max-width: 1366px) {
