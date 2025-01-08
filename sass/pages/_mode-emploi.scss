@@ -1,30 +1,45 @@
+.body_scndpage {
+
+  overflow: hidden;
+}
+
+
+
+
 .title-scndpage {
   padding-left: 15rem;
+
+  @media(max-width: 1366px) {
+    padding-left: 10rem;
+  }
 
 
   h1 {
     font-size: 4rem;
     margin-bottom: 0;
     margin-top: 1em;
+
+    @media(max-width: 1366px) {
+      font-size: 2.5rem;
+      margin-top: 1em;
+
+    }
   }
 }
+
+
 
 .main-scndpage {
   display: flex;
   justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
   padding: 5rem 0rem; // padding en haut et en bas
 
+  @media(max-width: 1366px) {
+    padding: 3rem 0rem;
+  }
+
   &__bloc {
     @include bloc_mode-emploi;
-
-    p {
-      text-align: center; // pas pris en compte dans le align-item au dessus, commande séparée pour le même résultat
-      padding: 0rem 1rem;
-    }
-
-    h2 {
-      padding: 1rem 0rem;
-    }
 
     &--middlebloc {
       border: 1em solid transparent;
@@ -32,7 +47,5 @@
       box-shadow: 0px 0px 1rem lightgray;
 
     }
-
-
   }
 }

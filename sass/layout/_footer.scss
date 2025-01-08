@@ -1,4 +1,5 @@
 .footer {
+
   display: flex;
   justify-content: end; //avoir la liste de liens à droite
   border-top: 1px solid $lightgreen; //barre verte claire au dessu de la nav
@@ -8,7 +9,6 @@
   left: 0;
 
   &__nav {
-
     padding: 1rem 0em; // permettre un espace au dessus et dessous de la nav
 
     &__ul {
