@@ -142,3 +142,50 @@ body {
     background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
     filter: grayscale(100%); /* Applique le filtre grayscale */
 }
+
+/* Style pour la popup */
+.popup {
+  display: none; /* Masqué par défaut */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* Fond blanc pour une apparence propre */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 999;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet popup */
+}
+
+/* Style pour le textarea dans le formulaire et dans le popup */
+.popup-textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Bordure légère */
+  border-radius: 5px;
+  resize: none; /* Désactiver le redimensionnement */
+  background-color: #f7f7f7; /* Arrière-plan clair comme dans le formulaire */
+  color: #333; /* Texte sombre pour une bonne lisibilité */
+}
+
+/* Ajout du style pour le bouton de fermeture dans la popup */
+.close-popup {
+  padding: 10px 20px;
+  background-color: #3498db; /* Bleu similaire au formulaire */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Effet hover pour le bouton de fermeture */
+.close-popup:hover {
+  background-color: #2980b9; /* Couleur légèrement plus sombre lors du survol */
+}
