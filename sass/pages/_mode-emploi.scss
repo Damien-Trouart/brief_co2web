@@ -27,38 +27,25 @@
 }
 
 
-.carousel {
 
-  @media(max-width: 360px) {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+
+.main-scndpage {
+  display: flex;
+  justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
+  padding: 5rem 0rem; // padding en haut et en bas
+
+  @media(max-width: 1366px) {
+    padding: 3rem 0rem;
   }
 
-  .main-scndpage {
-    display: flex;
-    justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
-    padding: 5rem 0rem; // padding en haut et en bas
+  &__bloc {
+    @include bloc_mode-emploi;
 
-    @media(max-width: 1366px) {
-      padding: 3rem 0rem;
-    }
+    &--middlebloc {
+      border: 1em solid transparent;
+      border-radius: 2rem;
+      box-shadow: 0px 0px 1rem lightgray;
 
-    @media(max-width: 360px) {
-      justify-content: 0;
-
-
-    }
-
-    &__bloc {
-      @include bloc_mode-emploi;
-
-      &--middlebloc {
-        border: 1em solid transparent;
-        border-radius: 2rem;
-        box-shadow: 0px 0px 1rem lightgray;
-
-      }
     }
   }
 }
