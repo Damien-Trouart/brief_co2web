@@ -8,14 +8,32 @@
   align-items: center;
   border-bottom: 1px solid lightgray;
 
+
+  @media(max-width: 360px) {
+    border: 1px solid blue;
+    position: relative;
+  }
+
+
+
   &__logo {
     img {
-      width: 8em;
+      width: 8rem;
       padding: 0em 3em;
+
+      @media(max-width: 360px) {
+        padding-left: 1rem;
+      }
     }
   }
 
   &__nav {
+
+    @media(max-width: 360px) {
+      display: none;
+    }
+
+
     &__ul {
       display: flex;
       flex-direction: row;
