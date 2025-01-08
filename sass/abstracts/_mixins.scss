@@ -1,7 +1,7 @@
 @mixin bloc_mode-emploi {
   box-sizing: border-box;
-  height: 35rem;
-  width: 30rem;
+  height: 33rem;
+  width: 28rem;
   display: flex;
   flex-direction: column;
   align-items: center; // avoir les élements des blocs centrés horizontalement
@@ -44,6 +44,9 @@
 
   @media(max-width: 360px) {
     border: 1px solid black;
+    min-width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
   }
 
 }

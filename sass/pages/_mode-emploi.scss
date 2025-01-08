@@ -1,12 +1,11 @@
 .body_scndpage {
-
   overflow: hidden;
 }
 
 
 
-
 .title-scndpage {
+
   padding-left: 15rem;
 
   @media(max-width: 1366px) {
@@ -20,26 +19,34 @@
 
   h1 {
     margin-bottom: 0;
-    margin-top: 1em;
-
-
   }
 }
-
 
 
 
 .main-scndpage {
   display: flex;
   justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
-  padding: 5rem 0rem; // padding en haut et en bas
+  padding: 2rem 0rem; // padding en haut et en bas
 
   @media(max-width: 1366px) {
     padding: 3rem 0rem;
   }
 
+  @media(max-width: 360px) {
+    border: 1px solid red;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    scroll-snap-type: x mandatory;
+  }
+
+
+
+
   &__bloc {
     @include bloc_mode-emploi;
+
+
 
     &--middlebloc {
       border: 1em solid transparent;
