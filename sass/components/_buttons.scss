@@ -36,3 +36,12 @@
     color: $primary-color; /* Couleur du texte lors du survol */
   }
 }
+
+@media (max-width: 360px) {
+  .btn__commencer {
+    padding: 1rem 1rem;
+  }
+  .btn__savoir {
+    padding: 1rem 1rem;
+  }
+}
