@@ -25,6 +25,60 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
     margin: 0 auto; // Centre le conteneur horizontalement
     margin-bottom: 200px;
     margin-top: 20px;
+    position: relative; // Ajoutez cette ligne pour permettre le positionnement absolu des images
+    z-index: 1; // Assurez-vous que le conteneur est au-dessus des images
+    overflow: visible; // Assurez-vous que les images peuvent déborder
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none; // Permet de cliquer à travers l'image
+        z-index: -1; // Place les images derrière le conteneur
+    }
+
+    &::before {
+        top: -50px;
+        left: -50px;
+        background-image: url('/home/utilisateur/Documents/brief_co2web/img/Groupe27.svg'); // Chemin correct vers l'image
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+    }
+
+    &::after {
+        bottom: -50px;
+        left: -50px;
+        background-image: url('../img/bottom-left-image.png'); // Chemin correct vers l'image
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+    }
+
+    .top-right {
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        background-image: url('../img/top-right-image.png'); // Chemin correct vers l'image
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+        z-index: -1; // Place l'image derrière le conteneur
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        background-image: url('../img/bottom-right-image.png'); // Chemin correct vers l'image
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+        z-index: -1; // Place l'image derrière le conteneur
+    }
 
     .form-group {
         margin-bottom: 15px;
@@ -36,9 +90,11 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         }
 
         input {
-            width: 100%;
+            width: calc(100% - 40px); // Réduit la largeur des champs de texte
             padding: 20px;
             box-sizing: border-box;
+            margin-left: 20px; // Ajoute une marge à gauche
+            margin-right: 20px; // Ajoute une marge à droite
         }
     }
 
