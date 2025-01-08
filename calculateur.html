@@ -11,6 +11,12 @@
     />
 </head>
 <body>
+    <!-- Images positionnées en dehors du formulaire -->
+    <div class="image top-left"></div>
+    <div class="image bottom-left"></div>
+    <div class="image bottom-right"></div>
+    <div class="image top-right"></div>
+
     <header class="header">
         <div class="header__logo">
           <img src="img/CO2-logo.svg" alt="CO2-logo" />
@@ -25,17 +31,15 @@
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </nav>
-      </header>
-      <main>
+    </header>
+
+    <main>
         <div class="title-container">
             <h1>Calculateur d'émissions de CO2</h1>
             <h2>Trajets domicile / travail en voiture</h2>
         </div>
         <div class="container">
-            <div class="image top-left"></div>
-            <div class="image bottom-left"></div>
-            <div class="image top-right"></div>
-            <div class="image bottom-right"></div>
+            <!-- Formulaire à l'intérieur du conteneur -->
             <form id="co2-calculator">
                 <div class="form-group">
                     <label for="distance">Distance parcourue par jour (en kilomètres):</label>
@@ -47,13 +51,13 @@
                 </div>
                 <button type="button" id="calculate-btn">Commencer</button>
                 <div>
-                <p>En utilisant cette calculatrice d'émission de carbone, vous acceptez que les informations soient inscrites et<br>stockées dans notre base de données publiques</p>
+                    <p>En utilisant cette calculatrice d'émission de carbone, vous acceptez que les informations soient inscrites et<br>stockées dans notre base de données publiques</p>
                 </div>
             </form>
             <div id="result" class="result"></div>
         </div>
-        <script src="script.js"></script>
     </main>
+
     <footer class="footer">
         <nav class="footer__nav">
           <ul class="footer__nav__ul">
@@ -68,3 +72,4 @@
     </footer>
 </body>
 </html>
+

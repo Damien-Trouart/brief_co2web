@@ -3,82 +3,36 @@ $lightestgreen: #a3e063; // Exemple de couleur verte claire
 $darkgreen: #6cbb4a; // Exemple de couleur verte foncée
 $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
 
+body {
+    position: relative;
+    overflow-x: hidden; // Empêche le défilement horizontal
+}
+
 .title-container {
     text-align: center;
     margin-top: 60px;
 
     h1, h2 {
         color: black;
-        font-size: 2.4em;
+        font-size: 3rem;
         margin: 0;
     }
 }
 
 .container {
-    background-color: $primary-color;
+    background-color: $primary-color; // Fond noir pour le conteneur du formulaire
     padding: 20px;
     border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 800px;
+    box-shadow: 0 0 10px rgba(29, 227, 46, 0.9);
+    width: 900px;
     height: 400px;
     text-align: center;
     margin: 0 auto; // Centre le conteneur horizontalement
     margin-bottom: 200px;
     margin-top: 20px;
-    position: relative; // Ajoutez cette ligne pour permettre le positionnement absolu des images
+    position: relative; // Permet le positionnement absolu des images
     z-index: 1; // Assurez-vous que le conteneur est au-dessus des images
-    overflow: visible; // Assurez-vous que les images peuvent déborder
-
-    &::before, &::after {
-        content: '';
-        position: absolute;
-        pointer-events: none; // Permet de cliquer à travers l'image
-        z-index: -1; // Place les images derrière le conteneur
-    }
-
-    &::before {
-        top: -50px;
-        left: -50px;
-        background-image: url('/home/utilisateur/Documents/brief_co2web/img/Groupe27.svg'); // Chemin correct vers l'image
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
-    }
-
-    &::after {
-        bottom: -50px;
-        left: -50px;
-        background-image: url('../img/bottom-left-image.png'); // Chemin correct vers l'image
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
-    }
-
-    .top-right {
-        position: absolute;
-        top: -50px;
-        right: -50px;
-        background-image: url('../img/top-right-image.png'); // Chemin correct vers l'image
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
-        z-index: -1; // Place l'image derrière le conteneur
-    }
-
-    .bottom-right {
-        position: absolute;
-        bottom: -50px;
-        right: -50px;
-        background-image: url('../img/bottom-right-image.png'); // Chemin correct vers l'image
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 200px;
-        z-index: -1; // Place l'image derrière le conteneur
-    }
+    overflow: hidden; // Empêche les éléments de déborder du conteneur
 
     .form-group {
         margin-bottom: 15px;
@@ -120,23 +74,71 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         color: black;
         font-size: 18px;
     }
+}
 
-    /* Style pour les champs de texte avec bordure en bas */
-    .bottom-border {
-        border: none; /* Supprime toutes les bordures */
-        border-bottom: 2px solid #ccc; /* Ajoute une bordure en bas */
-        color: grayscale(50%);
+// Modification des images placées dans les coins
+.image {
+    position: absolute;
+    pointer-events: none; // Permet de cliquer à travers l'image
+    z-index: 0; // Assurez-vous que l'image est derrière le formulaire
+
+    // Positionner les images à l'extérieur du formulaire
+    &.top-left {
+        top: 150px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
+        left: 300px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
+        background-image: url('/home/utilisateur/Documents/brief_co2web/img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 250px;
     }
 
-    /* Pseudo-élément pour la bordure en bas avec grayscale */
-    .bottom-border::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 4px; /* Réglez la hauteur de la bordure ici */
-        background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
-        filter: grayscale(100%); /* Applique le filtre grayscale */
+    &.bottom-left {
+        bottom: 180px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
+        left: 270px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
+        background-image: url('/home/utilisateur/Documents/brief_co2web/img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 260px;
+        height: 250px;
     }
+
+    &.bottom-right {
+        bottom: 200px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+        right: 260px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+        background-image: url('/home/utilisateur/Documents/brief_co2web/img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 320px;
+        height: 320px;
+    }
+
+    &.top-right {
+        top: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+        right: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+        background-image: url('/home/utilisateur/Documents/brief_co2web/img/'); // URL de l'image pour le coin supérieur droit
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Style pour les champs de texte avec bordure en bas */
+.bottom-border {
+    border: none; /* Supprime toutes les bordures */
+    border-bottom: 2px solid #ccc; /* Ajoute une bordure en bas */
+    color: grayscale(50%);
+}
+
+/* Pseudo-élément pour la bordure en bas avec grayscale */
+.bottom-border::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px; /* Réglez la hauteur de la bordure ici */
+    background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
+    filter: grayscale(100%); /* Applique le filtre grayscale */
 }
