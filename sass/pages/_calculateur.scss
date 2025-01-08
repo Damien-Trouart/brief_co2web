@@ -154,9 +154,11 @@ body {
   padding: 20px;
   border-radius: 10px;
   z-index: 999;
-  width: 400px;
+  width: 100%; /* Ajuste la largeur à 100% */
+  max-width: 500px; /* Largeur maximale pour ne pas dépasser de l'écran */
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet popup */
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.7); /* Ombre pour l'effet popup */
+  border: 4px solid $lightestgreen; /* Bordure verte */
 }
 
 /* Style pour le textarea dans le formulaire et dans le popup */
@@ -167,25 +169,28 @@ body {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc; /* Bordure légère */
-  border-radius: 5px;
+  border-radius: 30px;
   resize: none; /* Désactiver le redimensionnement */
   background-color: #f7f7f7; /* Arrière-plan clair comme dans le formulaire */
   color: #333; /* Texte sombre pour une bonne lisibilité */
+  box-shadow: 0 4px 6px rgba(108, 187, 74, 0.5); /* Ombre verte autour du textarea */
 }
 
-/* Ajout du style pour le bouton de fermeture dans la popup */
+/* Ajout du style pour le bouton de fermeture dans la popup, à l'identique de #calculate-btn */
 .close-popup {
-  padding: 10px 20px;
-  background-color: #3498db; /* Bleu similaire au formulaire */
-  color: white;
+  background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire */
+  color: $primary-color;
+  padding: 20px 55px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
-}
+  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
 
-/* Effet hover pour le bouton de fermeture */
-.close-popup:hover {
-  background-color: #2980b9; /* Couleur légèrement plus sombre lors du survol */
+  &:hover {
+    background: $darkestgreen; /* Couleur de fond lors du survol */
+    box-shadow: 0 6px 10px rgba(0, 128, 0, 0.7); /* Ombre plus prononcée lors du survol */
+    border-color: $darkgreen; /* Bordure verte plus foncée au survol */
+  }
 }
