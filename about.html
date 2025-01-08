@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A propos</title>
+    <link rel="stylesheet" href="sass/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="img/CO2-logo.svg" alt="CO2-logo" />
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav__ul">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="/mode-demploi.html">Mode d'emploi</a></li>
+          <li><a href="/trouver-velib.html">Trouver un velib</a></li>
+          <li><a href="/calculateur.html">Calculateur</a></li>
+          <li><a href="/about.html">A propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="about-project-slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="about-content">
+                <div class="about-image">
+                  <div class="green-background"></div>
+                  <img
+                    src="img/Groupe40.svg"
+                    alt="Illustration ordinateur"
+                    class="computer-image"
+                  />
+                  <img
+                    src="img/Groupe56.svg"
+                    alt="Illustration feuille"
+                    class="image-feuille"
+                  />
+                </div>
 
-<body>
-  <img src="./co2_WEB/__MACOSX/co2 WEB/img" alt="">
-  <p>blabla</p>
-</body>
+                <div class="about-text">
+                  <h2>À propos du projet</h2>
+                  <p>
+                    Arcu, ultrices amet, ac rhoncus eget egestas diam a
+                    malesuada tristique blandit elementum dapibus proin pretium
+                    rhoncus, viverra sagittis libero.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <!-- <div class="swiper-slide">
+              <div class="about-content">
+                <div class="about-image">
+                  <img
+                    src="image2-placeholder.png"
+                    alt="Illustration nature"
+                    class="nature-image"
+                  />
+                </div>
+                <div class="about-text">
+                  <h2>À propos du projet</h2>
+                  <p>
+                    Aenean egestas fermentum, at elementum ut ut eu, feugiat sit
+                    feugiat morbi id ipsum tincidunt.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
+           Navigation 
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div> -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">Copyright © 2022 CO2WEB. <br>All rights reserved</p>
+      <nav class="footer__nav">
+        <ul class="footer__nav__ul">
+          <li><a href="/index.html">Accueil</a></li>
+          <li><a href="/mode-demploi.html">Mode d'emploi</a></li>
+          <li><a href="/trouver-velib.html">Trouver un velib</a></li>
+          <li><a href="/calculateur.html">Calculateur</a></li>
+          <li><a href="/about.html">A propos</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
