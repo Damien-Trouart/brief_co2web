@@ -19,11 +19,6 @@
       display: flex;
       flex-direction: row;
       gap: 20px;
-
-      // @media (max-width: 768px) {
-      //   flex-direction: column;
-      //   text-align: center;
-      // }
     }
 
     .about-image {
@@ -41,7 +36,7 @@
           to right,
           $lightestgreen,
           $darkestgreen
-        ); /* Dégradé vert */
+        ); // Dégradé vert
         border-top-right-radius: 500px;
         border-bottom-right-radius: 500px;
         margin-right: 90%;
@@ -56,39 +51,64 @@
         margin-top: 240px;
         margin-right: 150px;
       }
+
       .image-feuille {
         position: relative;
         z-index: 2;
         width: 50%;
         right: 655px;
         bottom: 40px;
-
-        pointer-events: none; /* Rendre non-cliquable */
+        pointer-events: none; // Rendre non-cliquable
       }
     }
   }
 }
 
 .about-text {
+  right: 180px;
   flex: 10;
   margin: auto;
-  right: 00px;
+  position: relative; // Assure que les éléments positionnés absolument sont relatifs à .about-text
 
-  title .dot {
-    width: 8px;
-    height: 8px;
-    background-color: #6caf50;
-    border-radius: 50%;
-    margin-right: 10px;
+  .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; // Espace entre le titre et le texte
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: $darkgreen; // Couleur verte
+      border-radius: 50%;
+      margin-right: 10px;
+    }
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 2.6;
+  }
+
+  .highlighted-text {
+    font-size: 1rem;
+    line-height: 40px;
+    position: relative;
+    padding-top: 30px;
+    margin-top: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 190px; // Longueur de la barre
+      height: 3px; // Épaisseur de la barre
+      background-color: $darkgreen; // Couleur verte
+    }
   }
 }
 
