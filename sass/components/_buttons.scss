@@ -1,0 +1,38 @@
+.btn__commencer {
+  background: linear-gradient(
+    45deg,
+    $lightestgreen,
+    $darkgreen
+  ); /* Dégradé linéaire avec deux couleurs */
+  color: $primary-color;
+  padding: 0rem 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 18px;
+  transition: background 0.5s ease;
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
+
+  &:hover {
+    background: $darkestgreen; /* Couleur de fond lors du survol */
+    box-shadow: 0 6px 10px rgba(0, 128, 0, 0.7); /* Ombre plus prononcée lors du survol */
+  }
+}
+
+.btn__savoir {
+  background-color: $primary-color; /* Dégradé linéaire avec deux couleurs */
+  color: $darkgreen;
+  padding: 0rem 1rem;
+  border: 2px solid $darkgreen;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 18px;
+
+  &:hover {
+    background: $darkestgreen; /* Couleur de fond lors du survol */
+    box-shadow: 0 6px 10px rgba(0, 128, 0, 0.3); /* Ombre plus prononcée lors du survol */
+    color: $primary-color; /* Couleur du texte lors du survol */
+  }
+}
