@@ -8,7 +8,24 @@
   right: 0;
   left: 0;
 
-  @media(max-width: 360px) {}
+  @media(max-width: 360px) {
+    justify-content: row;
+    flex-wrap: wrap;
+  }
+
+
+
+
+  &__copyright {
+    color: transparent;
+
+    @media(max-width: 360px) {
+      color: black;
+    }
+  }
+
+
+
 
 
   &__nav {
@@ -18,7 +35,7 @@
       font-family: "Roboto";
       list-style-type: none; // enlever les points de liste par défault
       display: flex;
-      flex-direction: row; // avoir la liste de liens horizontalement
+      flex-flow: row wrap; // avoir la liste de liens horizontalement
 
       & li {
         padding-right: 2rem; //permettre un espace entre chaque lien

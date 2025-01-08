@@ -18,7 +18,7 @@ h1 {
   }
 
   @media(max-width: 360px) {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -30,6 +30,10 @@ h1 {
 h2 {
   @media(max-width: 1366px) {
     font-size: 1.25rem;
+  }
+
+  @media(max-width: 360px) {
+    font-size: 1rem;
   }
 
 
@@ -44,5 +48,9 @@ p {
 
   @media(max-width: 1366px) {
     font-size: 16px;
+  }
+
+  @media(max-width: 360px) {
+    font-size: 14px;
   }
 }

@@ -13,6 +13,10 @@
     padding-left: 10rem;
   }
 
+  @media(max-width: 360px) {
+    padding-left: 1rem;
+  }
+
 
   h1 {
     margin-bottom: 0;

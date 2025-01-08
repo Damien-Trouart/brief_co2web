@@ -4,13 +4,16 @@ body {
   height: 100%;
   width: 100%;
 
-  header {
-  }
+  header {}
 
   main {
     margin-top: $margin_header;
+
+    @media (max-width:360px) {
+      margin-top: $margin_header_phone;
+    }
+
   }
 
-  footer {
-  }
+  footer {}
 }
