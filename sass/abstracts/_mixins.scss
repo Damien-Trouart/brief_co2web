@@ -7,15 +7,11 @@
   align-items: center; // avoir les élements des blocs centrés horizontalement
   justify-content: center; // avoir les élements des blocs centrés verticalement
   text-align: center; // pas pris en compte dans le align-item au dessus, commande séparée pour le même résultat
-  padding: 0rem 2rem;
+  padding: 0rem 3rem;
   background-color: white;
 
-  p {
-    padding: 0rem 1rem;
-  }
-
   h2 {
-    margin-bottom: 0;
+    margin-bottom: 0; //enlever l'espace par défault affilié aux propriétés de h2
   }
 
   @media (max-width:1366px) {

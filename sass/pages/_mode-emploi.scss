@@ -6,11 +6,9 @@
 
 .title-scndpage {
 
-  padding-left: 15rem;
+  // mettre une espace à gauche du titre pour mieux le placer
 
-  @media(max-width: 1366px) {
-    padding-left: 10rem;
-  }
+  padding-left: 10rem;
 
   @media(max-width: 360px) {
     padding-left: 1rem;
@@ -18,15 +16,15 @@
 
 
   h1 {
-    margin-bottom: 0;
+    margin-bottom: 0; // enlever l'espace par default lié au prorpiété de h1
   }
 }
 
 
 .main-scndpage {
+  margin: 0em 9em;
   display: flex;
   justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
-  margin: 0rem 0rem 2rem 0rem; // espace en haut et en bas
 
   @media(max-width: 1366px) {
     padding: 3rem 0rem;
@@ -43,11 +41,11 @@
 
 
   &__bloc {
-    @include bloc_mode-emploi;
+    @include bloc_mode-emploi; //mixin pour le format bloc
 
     &--leftbloc,
     &--rightbloc {
-      margin-top: 2rem;
+      margin-top: 2rem; // espace au dessus des blocs gauche et droit pour aligner avec le bloc central
 
       @media (max-width: 360px) {
         margin-top: 0;
@@ -59,9 +57,9 @@
     &--middlebloc {
       border: 1em solid transparent;
       border-radius: 2rem;
-      box-shadow: 0px 0px 1rem lightgray;
-      margin: 2.5rem 7rem 3rem 3.5rem;
-      z-index: 1;
+      box-shadow: 0px 0px 20px -10px black;
+      margin: 2.5rem 7rem 3rem 3.5rem; //margins particulières pour pousser la div imgbloc et positionner correctement les images
+      z-index: 1; //s'assurer que le bloc soit devant les images
 
 
       @media (max-width:360px) {
@@ -82,7 +80,7 @@
     &--bottomleft,
     &--topright {
       position: absolute;
-      z-index: -1;
+      z-index: -1; //s'assurer que les images oient bien derrière la div
       width: 10rem;
 
       @media (max-width:360px) {
