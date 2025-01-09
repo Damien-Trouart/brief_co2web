@@ -2,6 +2,8 @@ $primary-color: #ffffff; // Exemple de couleur primaire
 $lightestgreen: #a3e063; // Exemple de couleur verte claire
 $darkgreen: #6cbb4a; // Exemple de couleur verte foncée
 $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
+$placeholder-color: rgba(0, 0, 0, 0.4); // Couleur grise avec opacité pour les placeholders
+$border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordures
 
 .contact-page {
     position: relative;
@@ -20,11 +22,11 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
 
     .container {
         background-color: $primary-color; // Fond noir pour le conteneur du formulaire
-        padding: 20px;
+        padding: 60px; // Augmente les marges intérieures
         border-radius: 30px;
         box-shadow: 0 0 10px rgba(29, 227, 46, 0.9);
         width: 900px;
-        height: 400px;
+        height: auto; // Ajuste la hauteur automatiquement
         text-align: center;
         margin: 0 auto; // Centre le conteneur horizontalement
         margin-bottom: 200px;
@@ -36,49 +38,61 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         .form-group {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
+            margin-bottom: 30px; // Augmente la marge entre les groupes de champs
 
-            label {
-                display: block;
-                margin-bottom: 10px;
-                color: black;
-                width: 45%;
-                text-align: left;
-            }
+            .form-column {
+                width: 45%; // Largeur des colonnes
+                margin: 0 10px; // Marges entre les colonnes
 
-            input, textarea {
-                width: 45%;
-                padding: 10px;
-                box-sizing: border-box;
-                margin-bottom: 10px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                    color: black;
+                    text-align: left;
+                }
+
+                input, textarea {
+                    width: 100%;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                    border: none;
+                    border-bottom: 2px solid $border-color; // Bordure inférieure grise avec opacité
+                    border-radius: 4px;
+
+                    &::placeholder {
+                        color: $placeholder-color; // Couleur grise avec opacité pour les placeholders
+                    }
+                }
             }
 
             textarea {
                 height: 100px;
                 resize: vertical;
-                width: 92%; // Ajuste la largeur pour correspondre à l'image
-                margin-left: 4%;
+                width: 100%; // Ajuste la largeur pour correspondre à l'image
             }
         }
 
-        #submit-btn {
-            background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
-            color: $primary-color;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.5s ease;
-            box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
-            margin-left: auto; // Aligne le bouton à droite
-            margin-right: 20px; // Ajoute une marge à droite pour l'alignement
+        .submit-btn-container {
+            display: flex;
+            justify-content: flex-end; // Aligne le bouton à droite
+            margin-top: 20px; // Ajoute une marge en haut pour l'alignement
 
-            &:hover {
-                background: $darkestgreen; /* Couleur de fond lors du survol */
-                box-shadow: 0 6px 10px rgba(0, 128, 0, 0.7); /* Ombre plus prononcée lors du survol */
+            #submit-btn {
+                background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
+                color: $primary-color;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background 0.5s ease;
+                box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
+
+                &:hover {
+                    background: $darkestgreen; /* Couleur de fond lors du survol */
+                    box-shadow: 0 6px 10px rgba(0, 128, 0, 0.7); /* Ombre plus prononcée lors du survol */
+                }
             }
         }
 
@@ -140,7 +154,7 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
     /* Style pour les champs de texte avec bordure en bas */
     .bottom-border {
         border: none; /* Supprime toutes les bordures */
-        border-bottom: 2px solid #ccc; /* Ajoute une bordure en bas */
+        border-bottom: 2px solid $border-color; /* Ajoute une bordure en bas */
         color: grayscale(50%);
     }
 
@@ -208,5 +222,3 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
       }
     }
 }
-
-

@@ -41,22 +41,32 @@
             <!-- Formulaire à l'intérieur du conteneur -->
             <form id="contact-form">
                 <div class="form-group">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" id="prenom" name="prenom" required>
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" required>
+                    <div class="form-column">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required placeholder="Prénom">
+                    </div>
+                    <div class="form-column">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required placeholder="Nom">
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Votre email</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="telephone">Téléphone</label>
-                    <input type="tel" id="telephone" name="telephone" required>
+                    <div class="form-column">
+                        <label for="email">Votre email</label>
+                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                    </div>
+                    <div class="form-column">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" required placeholder="Numéro">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="message">Votre message</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" required placeholder="Message"></textarea>
                 </div>
-                <button type="submit" id="submit-btn">Commencer</button>
+                <div class="form-group submit-btn-container">
+                    <button type="submit" id="submit-btn">Commencer</button>
+                </div>
             </form>
         </div>
     </main>
@@ -75,4 +85,3 @@
     </footer>
 </body>
 </html>
-
