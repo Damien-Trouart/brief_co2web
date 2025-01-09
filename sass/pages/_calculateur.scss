@@ -85,7 +85,7 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         &.top-left {
             top: 150px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
             left: 300px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
-            background-image: url('/img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
+            background-image: url('../../img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
             background-size: contain;
             background-repeat: no-repeat;
             width: 250px;
@@ -95,7 +95,7 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         &.bottom-left {
             bottom: 180px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
             left: 270px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
-            background-image: url('/img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
+            background-image: url('../../img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
             background-size: contain;
             background-repeat: no-repeat;
             width: 260px;
@@ -105,7 +105,7 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         &.bottom-right {
             bottom: 200px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
             right: 260px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
-            background-image: url('/img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
+            background-image: url('../../img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
             background-size: contain;
             background-repeat: no-repeat;
             width: 320px;
@@ -115,7 +115,8 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         &.top-right {
             top: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
             right: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            background-image: url('/img/'); // URL de l'image pour le coin supérieur droit
+            background-image: url('/home/utilisateur/Documents/brief_co2web/img/topright.svg'); // URL de l'image pour le coin supérieur droit
+            background-image: url(''); // URL de l'image pour le coin supérieur droit
             background-size: contain;
             background-repeat: no-repeat;
             width: 150px;

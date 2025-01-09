@@ -22,18 +22,18 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
 
     .container {
         background-color: $primary-color; // Fond noir pour le conteneur du formulaire
-        padding: 60px; // Augmente les marges intérieures
+        padding: 80px; // Augmente les marges intérieures
         border-radius: 30px;
         box-shadow: 0 0 10px rgba(29, 227, 46, 0.9);
         width: 900px;
         height: auto; // Ajuste la hauteur automatiquement
         text-align: center;
         margin: 0 auto; // Centre le conteneur horizontalement
-        margin-bottom: 200px;
+        margin-bottom: 60px; // Réduit la marge en bas de l'encadré du formulaire
         margin-top: 20px;
         position: relative; // Permet le positionnement absolu des images
         z-index: 1; // Assurez-vous que le conteneur est au-dessus des images
-        overflow: hidden; // Empêche les éléments de déborder du conteneur
+        /*overflow: hidden; // Empêche les éléments de déborder du conteneur*/
 
         .form-group {
             display: flex;
@@ -41,17 +41,18 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
             margin-bottom: 30px; // Augmente la marge entre les groupes de champs
 
             .form-column {
-                width: 45%; // Largeur des colonnes
-                margin: 0 10px; // Marges entre les colonnes
+                width: 40%; // Réduit la largeur des colonnes
+                margin: 0 20px; // Augmente les marges entre les colonnes
 
                 label {
                     display: block;
                     margin-bottom: 10px;
                     color: black;
                     text-align: left;
+                    font-size: 1.2em; // Augmente légèrement la taille de l'écriture des labels
                 }
 
-                input, textarea {
+                input {
                     width: 100%;
                     padding: 10px;
                     box-sizing: border-box;
@@ -62,14 +63,39 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
 
                     &::placeholder {
                         color: $placeholder-color; // Couleur grise avec opacité pour les placeholders
+                        font-size: 1.2em; // Augmente légèrement la taille de l'écriture des placeholders
                     }
                 }
             }
 
-            textarea {
-                height: 100px;
-                resize: vertical;
-                width: 100%; // Ajuste la largeur pour correspondre à l'image
+            &.message-group {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+
+                label {
+                    width: auto;
+                    margin-bottom: 10px;
+                    font-size: 1.2em; // Augmente légèrement la taille de l'écriture des labels
+                    margin-left: 10px; // Déplace légèrement le label vers la droite
+                }
+
+                textarea {
+                    width: 85%; // Augmente la longueur du textarea
+                    padding: 10px;
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                    border: none;
+                    border-bottom: 2px solid $border-color; // Bordure inférieure grise avec opacité
+                    border-radius: 4px;
+                    height: 100px;
+                    resize: vertical;
+
+                    &::placeholder {
+                        color: $placeholder-color; // Couleur grise avec opacité pour les placeholders
+                        font-size: 1.2em; // Augmente légèrement la taille de l'écriture des placeholders
+                    }
+                }
             }
         }
 
@@ -77,15 +103,17 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
             display: flex;
             justify-content: flex-end; // Aligne le bouton à droite
             margin-top: 20px; // Ajoute une marge en haut pour l'alignement
+            margin-right: 40px; // Déplace le bouton légèrement vers la gauche
+            margin-bottom: -20px; // Réduit l'espace en dessous du bouton
 
             #submit-btn {
                 background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
                 color: $primary-color;
-                padding: 10px 20px;
+                padding: 12px 25px; // Augmente légèrement la taille du bouton
                 border: none;
                 border-radius: 30px;
                 cursor: pointer;
-                font-size: 16px;
+                font-size: 18px; // Augmente légèrement la taille de la police du bouton
                 transition: background 0.5s ease;
                 box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
 
@@ -113,7 +141,7 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
         &.top-left {
             top: 150px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
             left: 300px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
-            background-image: url('/img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
+            background-image: url('../../img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
             background-size: contain;
             background-repeat: no-repeat;
             width: 250px;
@@ -141,13 +169,13 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
         }
 
         &.top-right {
-            top: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            right: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            background-image: url('/img/'); // URL de l'image pour le coin supérieur droit
+            top: -200px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            right: 260px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            background-image: url('../../img/topright.svg'); // URL de l'image pour le coin supérieur droit
             background-size: contain;
             background-repeat: no-repeat;
-            width: 150px;
-            height: 150px;
+            width: 320px;
+            height: 320px;
         }
     }
 
@@ -222,3 +250,4 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
       }
     }
 }
+
