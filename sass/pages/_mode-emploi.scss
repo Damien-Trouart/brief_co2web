@@ -32,9 +32,9 @@
 
   @media(max-width: 360px) {
     border: 1px solid red;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    scroll-snap-type: x mandatory;
+    margin: 0;
+    padding-bottom: 0;
+
   }
 
 
@@ -102,11 +102,19 @@
       position: relative;
       margin: 2.5rem 7rem 3rem 3.5rem; //margins particulières pour positionner correctement les images
 
+      @media (max-width:360px) {
+        margin: 0;
+      }
+
       &--ellipse {
         z-index: 2;
         position: absolute;
         top: 0;
         right: 0;
+
+        @media (max-width:360px) {
+          display: none;
+        }
 
 
       }
