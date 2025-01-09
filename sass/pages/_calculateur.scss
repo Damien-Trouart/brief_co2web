@@ -3,194 +3,194 @@ $lightestgreen: #a3e063; // Exemple de couleur verte claire
 $darkgreen: #6cbb4a; // Exemple de couleur verte foncée
 $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
 
-body {
+.calculator-page {
     position: relative;
     overflow-x: hidden; // Empêche le défilement horizontal
-}
 
-.title-container {
-    text-align: center;
-    margin-top: 60px;
+    .title-container {
+        text-align: center;
+        margin-top: 60px;
 
-    h1, h2 {
-        color: black;
-        font-size: 3rem;
-        margin: 0;
-    }
-}
-
-.container {
-    background-color: $primary-color; // Fond noir pour le conteneur du formulaire
-    padding: 20px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(29, 227, 46, 0.9);
-    width: 900px;
-    height: 400px;
-    text-align: center;
-    margin: 0 auto; // Centre le conteneur horizontalement
-    margin-bottom: 200px;
-    margin-top: 20px;
-    position: relative; // Permet le positionnement absolu des images
-    z-index: 1; // Assurez-vous que le conteneur est au-dessus des images
-    overflow: hidden; // Empêche les éléments de déborder du conteneur
-
-    .form-group {
-        margin-bottom: 15px;
-
-        label {
-            display: block;
-            margin-bottom: 10px;
+        h1, h2 {
             color: black;
-        }
-
-        input {
-            width: calc(100% - 40px); // Réduit la largeur des champs de texte
-            padding: 20px;
-            box-sizing: border-box;
-            margin-left: 20px; // Ajoute une marge à gauche
-            margin-right: 20px; // Ajoute une marge à droite
+            font-size: 3rem;
+            margin: 0;
         }
     }
 
-    #calculate-btn {
-        background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
-        color: $primary-color;
-        padding: 20px 55px;
-        border: none;
+    .container {
+        background-color: $primary-color; // Fond noir pour le conteneur du formulaire
+        padding: 20px;
         border-radius: 30px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background 0.5s ease;
-        box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
+        box-shadow: 0 0 10px rgba(29, 227, 46, 0.9);
+        width: 900px;
+        height: 400px;
+        text-align: center;
+        margin: 0 auto; // Centre le conteneur horizontalement
+        margin-bottom: 200px;
+        margin-top: 20px;
+        position: relative; // Permet le positionnement absolu des images
+        z-index: 1; // Assurez-vous que le conteneur est au-dessus des images
+        overflow: hidden; // Empêche les éléments de déborder du conteneur
 
-        &:hover {
-            background: $darkestgreen; /* Couleur de fond lors du survol */
-            box-shadow: 0 6px 10px rgba(0, 128, 0, 0.7); /* Ombre plus prononcée lors du survol */
+        .form-group {
+            margin-bottom: 15px;
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                color: black;
+            }
+
+            input {
+                width: calc(100% - 40px); // Réduit la largeur des champs de texte
+                padding: 20px;
+                box-sizing: border-box;
+                margin-left: 20px; // Ajoute une marge à gauche
+                margin-right: 20px; // Ajoute une marge à droite
+            }
+        }
+
+        #calculate-btn {
+            background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
+            color: $primary-color;
+            padding: 20px 55px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.5s ease;
+            box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
+
+            &:hover {
+                background: $darkestgreen; /* Couleur de fond lors du survol */
+                box-shadow: 0 6px 10px rgba(0, 128, 0, 0.7); /* Ombre plus prononcée lors du survol */
+            }
+        }
+
+        .result {
+            margin-top: 20px;
+            color: black;
+            font-size: 18px;
         }
     }
 
-    .result {
-        margin-top: 20px;
-        color: black;
-        font-size: 18px;
+    // Modification des images placées dans les coins
+    .image {
+        position: absolute;
+        pointer-events: none; // Permet de cliquer à travers l'image
+        z-index: 0; // Assurez-vous que l'image est derrière le formulaire
+
+        // Positionner les images à l'extérieur du formulaire
+        &.top-left {
+            top: 150px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
+            left: 300px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
+            background-image: url('/img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 250px;
+            height: 250px;
+        }
+
+        &.bottom-left {
+            bottom: 180px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
+            left: 270px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
+            background-image: url('/img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 260px;
+            height: 250px;
+        }
+
+        &.bottom-right {
+            bottom: 200px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+            right: 260px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+            background-image: url('/img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 320px;
+            height: 320px;
+        }
+
+        &.top-right {
+            top: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            right: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            background-image: url('/img/'); // URL de l'image pour le coin supérieur droit
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 150px;
+            height: 150px;
+        }
     }
-}
 
-// Modification des images placées dans les coins
-.image {
-    position: absolute;
-    pointer-events: none; // Permet de cliquer à travers l'image
-    z-index: 0; // Assurez-vous que l'image est derrière le formulaire
-
-    // Positionner les images à l'extérieur du formulaire
-    &.top-left {
-        top: 150px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
-        left: 300px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
-        background-image: url('/img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 250px;
-        height: 250px;
+    /* Style pour les champs de texte avec bordure en bas */
+    .bottom-border {
+        border: none; /* Supprime toutes les bordures */
+        border-bottom: 2px solid #ccc; /* Ajoute une bordure en bas */
+        color: grayscale(50%);
     }
 
-    &.bottom-left {
-        bottom: 180px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
-        left: 270px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
-        background-image: url('/img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 260px;
-        height: 250px;
+    /* Pseudo-élément pour la bordure en bas avec grayscale */
+    .bottom-border::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px; /* Réglez la hauteur de la bordure ici */
+        background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
+        filter: grayscale(100%); /* Applique le filtre grayscale */
     }
 
-    &.bottom-right {
-        bottom: 200px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
-        right: 260px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
-        background-image: url('/img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 320px;
-        height: 320px;
+    /* Style pour la popup */
+    .popup {
+      display: none; /* Masqué par défaut */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white; /* Fond blanc pour une apparence propre */
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 999;
+      width: 100%; /* Ajuste la largeur à 100% */
+      max-width: 500px; /* Largeur maximale pour ne pas dépasser de l'écran */
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 128, 0, 0.7); /* Ombre pour l'effet popup */
+      border: 4px solid $lightestgreen; /* Bordure verte */
     }
 
-    &.top-right {
-        top: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-        right: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-        background-image: url('/img/'); // URL de l'image pour le coin supérieur droit
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 150px;
-        height: 150px;
+    /* Style pour le textarea dans le formulaire et dans le popup */
+    .popup-textarea {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc; /* Bordure légère */
+      border-radius: 30px;
+      resize: none; /* Désactiver le redimensionnement */
+      background-color: #f7f7f7; /* Arrière-plan clair comme dans le formulaire */
+      color: #333; /* Texte sombre pour une bonne lisibilité */
+      box-shadow: 0 4px 6px rgba(108, 187, 74, 0.5); /* Ombre verte autour du textarea */
     }
-}
 
-/* Style pour les champs de texte avec bordure en bas */
-.bottom-border {
-    border: none; /* Supprime toutes les bordures */
-    border-bottom: 2px solid #ccc; /* Ajoute une bordure en bas */
-    color: grayscale(50%);
-}
+    /* Ajout du style pour le bouton de fermeture dans la popup, à l'identique de #calculate-btn */
+    .close-popup {
+      background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire */
+      color: $primary-color;
+      padding: 20px 55px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+      box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
 
-/* Pseudo-élément pour la bordure en bas avec grayscale */
-.bottom-border::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px; /* Réglez la hauteur de la bordure ici */
-    background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
-    filter: grayscale(100%); /* Applique le filtre grayscale */
-}
-
-/* Style pour la popup */
-.popup {
-  display: none; /* Masqué par défaut */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white; /* Fond blanc pour une apparence propre */
-  padding: 20px;
-  border-radius: 10px;
-  z-index: 999;
-  width: 100%; /* Ajuste la largeur à 100% */
-  max-width: 500px; /* Largeur maximale pour ne pas dépasser de l'écran */
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.7); /* Ombre pour l'effet popup */
-  border: 4px solid $lightestgreen; /* Bordure verte */
-}
-
-/* Style pour le textarea dans le formulaire et dans le popup */
-.popup-textarea {
-  width: 100%;
-  height: 150px;
-  margin-bottom: 20px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc; /* Bordure légère */
-  border-radius: 30px;
-  resize: none; /* Désactiver le redimensionnement */
-  background-color: #f7f7f7; /* Arrière-plan clair comme dans le formulaire */
-  color: #333; /* Texte sombre pour une bonne lisibilité */
-  box-shadow: 0 4px 6px rgba(108, 187, 74, 0.5); /* Ombre verte autour du textarea */
-}
-
-/* Ajout du style pour le bouton de fermeture dans la popup, à l'identique de #calculate-btn */
-.close-popup {
-  background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire */
-  color: $primary-color;
-  padding: 20px 55px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
-  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
-
-  &:hover {
-    background: $darkestgreen; /* Couleur de fond lors du survol */
-    box-shadow: 0 6px 10px rgba(0, 128, 0, 0.7); /* Ombre plus prononcée lors du survol */
-    border-color: $darkgreen; /* Bordure verte plus foncée au survol */
-  }
+      &:hover {
+        background: $darkestgreen; /* Couleur de fond lors du survol */
+        box-shadow: 0 6px 10px rgba(0, 128, 0, 0.7); /* Ombre plus prononcée lors du survol */
+        border-color: $darkgreen; /* Bordure verte plus foncée au survol */
+      }
+    }
 }
