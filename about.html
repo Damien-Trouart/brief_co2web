@@ -70,37 +70,37 @@
                 </div>
               </div>
             </div>
-          </div>
-                     <!-- Flèches de navigation -->
-          <div class="swiper-slide">
-            <div class="about-content"></div>
-              <div class="about-text">
-                <div class="title">
-                  <span class="dot"></span>
-                  <h2>À propos du projet</h2>
-                </div>
-                <p class="description">
-                  Arcu, ultrices amet, ac rhoncus eget egestas diam a
-                  malesuada tristique blandit elementum dapibus proin pretium
-                  rhoncus, viverra sagittis libero, libero varius accumsan
-                  ridiculus amet nam duis sit vestibulum nibh eget ultrices
-                  magna facilisis potenti
-                </p>
-                <p class="highlighted-text">
-                  Aenean egestas fermentum, at elementum ut ut eu, feugiat sit
-                  feugiat morbi id ipsum tincidunt
-                </p>
-                <div class="swiper-button-prev">
-                  <img src="img/arrow.png" alt="Flèche gauche" />
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="about-content arbre-content">
+                <div class="about-text">
+                  <div class="title">
+                    <span class="dot"></span>
+                    <h2>À propos du projet</h2>
+                  </div>
+                  <p class="description">
+                    Arcu, ultrices amet, ac rhoncus eget egestas diam a
+                    malesuada tristique blandit elementum dapibus proin pretium
+                    rhoncus, viverra sagittis libero, libero varius accumsan
+                    ridiculus amet nam duis sit vestibulum nibh eget ultrices
+                    magna facilisis potenti
+                  </p>
+
+                  <div class="swiper-button-prev">
+                    <img src="img/arrow.png" alt="Flèche gauche" />
+                  </div>
                 </div>
                 <div class="about-image">
                   <img
                     src="img/Groupe146.svg"
-                    alt="Illustration ordinateur"
+                    alt="Illustration arbre"
                     class="tree-image"
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -124,32 +124,31 @@
         const slides = document.querySelectorAll(".swiper-slide");
         const nextButton = document.querySelector(".swiper-button-next img");
         const prevButton = document.querySelector(".swiper-button-prev img");
-    
+
         let currentSlide = 0;
-    
+
         const showSlide = (index) => {
           slides.forEach((slide, i) => {
             slide.style.display = i === index ? "flex" : "none";
           });
         };
-    
+
         nextButton.addEventListener("click", () => {
           if (currentSlide < slides.length - 1) {
             currentSlide++;
             showSlide(currentSlide);
           }
         });
-    
+
         prevButton.addEventListener("click", () => {
           if (currentSlide > 0) {
             currentSlide--;
             showSlide(currentSlide);
           }
         });
-    
+
         showSlide(currentSlide);
       });
     </script>
-    
   </body>
 </html>
