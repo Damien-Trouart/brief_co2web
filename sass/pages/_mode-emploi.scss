@@ -26,7 +26,7 @@
 .main-scndpage {
   display: flex;
   justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
-  padding: 2rem 0rem; // padding en haut et en bas
+  margin: 0rem 0rem 2rem 0rem; // espace en haut et en bas
 
   @media(max-width: 1366px) {
     padding: 3rem 0rem;
@@ -45,16 +45,29 @@
   &__bloc {
     @include bloc_mode-emploi;
 
+    &--leftbloc,
+    &--rightbloc {
+      margin-top: 2rem;
+
+      @media (max-width: 360px) {
+        margin-top: 0;
+      }
+    }
+
 
 
     &--middlebloc {
       border: 1em solid transparent;
       border-radius: 2rem;
       box-shadow: 0px 0px 1rem lightgray;
+      margin: 2.5rem 7rem 3rem 3.5rem;
+      z-index: 1;
+
 
       @media (max-width:360px) {
         border: none;
         box-shadow: none;
+        margin: 0;
       }
     }
   }
@@ -62,14 +75,29 @@
 
 
   &__imgbloc {
-    border: 1px solid red;
+
     position: relative;
+    z-index: 0;
 
     &--bottomleft,
     &--topright {
-      border: 1px solid blue;
       position: absolute;
-      z-index: 2;
+      z-index: -1;
+      width: 10rem;
+
+      @media (max-width:360px) {
+        display: none;
+      }
+    }
+
+    &--bottomleft {
+      bottom: 0;
+      left: 0;
+    }
+
+    &--topright {
+      top: 0;
+      right: 0;
     }
   }
 }
