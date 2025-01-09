@@ -22,7 +22,7 @@
 
 
 .main-scndpage {
-  margin: 0em 9em;
+  margin: 0em 10em;
   display: flex;
   justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
 
@@ -58,7 +58,6 @@
       border: 1em solid transparent;
       border-radius: 2rem;
       box-shadow: 0px 0px 20px -10px black;
-      margin: 2.5rem 7rem 3rem 3.5rem; //margins particulières pour pousser la div imgbloc et positionner correctement les images
       z-index: 1; //s'assurer que le bloc soit devant les images
 
 
@@ -73,7 +72,6 @@
 
 
   &__imgbloc {
-
     position: relative;
     z-index: 0;
 
@@ -96,6 +94,22 @@
     &--topright {
       top: 0;
       right: 0;
+    }
+
+
+    &__front {
+      z-index: 0;
+      position: relative;
+      margin: 2.5rem 7rem 3rem 3.5rem; //margins particulières pour positionner correctement les images
+
+      &--ellipse {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+
+      }
     }
   }
 }
