@@ -19,9 +19,6 @@
 
   h1 {
     margin-bottom: 0;
-
-    @media(max-width: 360px) {}
-
   }
 }
 
@@ -59,7 +56,20 @@
         border: none;
         box-shadow: none;
       }
+    }
+  }
 
+
+
+  &__imgbloc {
+    border: 1px solid red;
+    position: relative;
+
+    &--bottomleft,
+    &--topright {
+      border: 1px solid blue;
+      position: absolute;
+      z-index: 2;
     }
   }
 }
