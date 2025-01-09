@@ -1,0 +1,78 @@
+.mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+    /* Autres styles pour le menu mobile */
+  }
+}
+
+/* Desktop: 1920x1080 */
+@media screen and (min-width: 1367px) {
+  .about-project-slider {
+    /* Ajustements pour desktop */
+  }
+}
+
+/* Notebook: 1366x768 */
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+  .about-project-slider {
+    /* Ajustements pour notebook */
+    .about-content {
+      flex-direction: column;
+    }
+    .about-image {
+      .computer-image {
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+/* Tablette: 768x1024 */
+@media screen and (min-width: 361px) and (max-width: 768px) {
+  .about-project-slider {
+    /* Ajustements pour tablette */
+    .about-content {
+      flex-direction: column;
+    }
+    .about-image {
+      .computer-image {
+        max-width: 80%;
+      }
+    }
+    .about-text {
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+/* Mobile: 360x800 */
+@media screen and (max-width: 360px) {
+  .about-project-slider {
+    /* Ajustements pour mobile */
+    .about-content {
+      flex-direction: column;
+    }
+    .about-image {
+      .computer-image {
+        max-width: 90%;
+      }
+      .image-feuille {
+        display: none;
+      }
+    }
+    .about-text {
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
