@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="sass/main.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body class="contact-page">
+    <!-- Images positionnées en dehors du formulaire -->
+    <div class="image top-left"></div>
+    <div class="image bottom-left"></div>
+    <div class="image bottom-right"></div>
+    <div class="image top-right"></div>
+
+    <header class="header">
+        <div class="header__logo">
+          <img src="img/CO2-logo.svg" alt="CO2-logo" />
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav__ul">
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/mode-demploi.html">Mode d'emploi</a></li>
+            <li><a href="/trouver-velib.html">Trouver un velib</a></li>
+            <li><a href="/calculateur.html">Calculateur</a></li>
+            <li><a href="/about.html">A propos</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title-container">
+            <h1>Contactez-nous</h1>
+        </div>
+        <div class="container">
+            <!-- Formulaire à l'intérieur du conteneur -->
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Votre email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" id="submit-btn">Commencer</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+          <ul class="footer__nav__ul">
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/mode-demploi.html">Mode d'emploi</a></li>
+            <li><a href="/trouver-velib.html">Trouver un velib</a></li>
+            <li><a href="/calculateur.html">Calculateur</a></li>
+            <li><a href="/about.html">A propos</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+    </footer>
+</body>
+</html>
+
