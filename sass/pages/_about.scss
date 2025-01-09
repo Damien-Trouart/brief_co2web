@@ -1,5 +1,6 @@
 .about-project-slider {
   padding: 60px 20px;
+  position: relative; /* Pour positionner correctement les flèches */
 
   .swiper-container {
     max-width: 1500px;
@@ -42,8 +43,7 @@
         margin-right: 90%;
       }
 
-      .computer-image,
-      .nature-image {
+      .computer-image {
         position: relative;
         z-index: 1;
         max-width: 50%;
@@ -111,8 +111,54 @@
     }
   }
 }
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
 
-.swiper-button-next,
 .swiper-button-prev {
-  color: #4caf50;
+  left: 10px; /* Ajuster selon ton design */
+}
+
+.swiper-button-next {
+  right: 10px; /* Ajuster selon ton design */
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+  width: 40px; /* Ajuster la taille des flèches */
+  height: auto;
+}
+
+/* Flèches de navigation (ajoutées proprement) */
+.about-project-slider .slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none; /* Pour ne pas gêner la navigation */
+}
+
+.about-project-slider .slider-controls img {
+  pointer-events: all; /* Réactiver les clics sur les flèches */
+  width: 40px; /* Taille des flèches */
+  height: auto;
+  cursor: pointer;
+}
+
+.about-project-slider .slider-controls .prev {
+  position: absolute;
+  left: 10px;
+}
+
+.about-project-slider .slider-controls .next {
+  position: absolute;
+  right: 10px;
 }

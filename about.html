@@ -54,45 +54,60 @@
                     <h2>À propos du projet</h2>
                   </div>
                   <p class="description">
-                    Arcu, ultrices amet, ac rhoncus eget egestas diam a malesuada tristique blandit elementum dapibus proin pretium rhoncus, viverra sagittis libero, libero varius accumsan ridiculus amet nam duis sit vestibulum nibh eget ultrices magna facilisis potenti
+                    Arcu, ultrices amet, ac rhoncus eget egestas diam a
+                    malesuada tristique blandit elementum dapibus proin pretium
+                    rhoncus, viverra sagittis libero, libero varius accumsan
+                    ridiculus amet nam duis sit vestibulum nibh eget ultrices
+                    magna facilisis potenti
                   </p>
                   <p class="highlighted-text">
-                    Aenean egestas fermentum, at elementum ut ut eu, feugiat sit feugiat morbi id ipsum tincidunt
-                  </p>
-                </div>
-                
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <!-- <div class="swiper-slide">
-              <div class="about-content">
-                <div class="about-image">
-                  <img
-                    src="image2-placeholder.png"
-                    alt="Illustration nature"
-                    class="nature-image"
-                  />
-                </div>
-                <div class="about-text">
-                  <h2>À propos du projet</h2>
-                  <p>
                     Aenean egestas fermentum, at elementum ut ut eu, feugiat sit
-                    feugiat morbi id ipsum tincidunt.
+                    feugiat morbi id ipsum tincidunt
                   </p>
+                  <div class="swiper-button-next">
+                    <img src="img/arrowone.png" alt="Flèche droite" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-           Navigation 
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div> -->
+                     <!-- Flèches de navigation -->
+          <div class="swiper-slide">
+            <div class="about-content"></div>
+              <div class="about-text">
+                <div class="title">
+                  <span class="dot"></span>
+                  <h2>À propos du projet</h2>
+                </div>
+                <p class="description">
+                  Arcu, ultrices amet, ac rhoncus eget egestas diam a
+                  malesuada tristique blandit elementum dapibus proin pretium
+                  rhoncus, viverra sagittis libero, libero varius accumsan
+                  ridiculus amet nam duis sit vestibulum nibh eget ultrices
+                  magna facilisis potenti
+                </p>
+                <p class="highlighted-text">
+                  Aenean egestas fermentum, at elementum ut ut eu, feugiat sit
+                  feugiat morbi id ipsum tincidunt
+                </p>
+                <div class="swiper-button-prev">
+                  <img src="img/arrow.png" alt="Flèche gauche" />
+                </div>
+                <div class="about-image">
+                  <img
+                    src="img/Groupe146.svg"
+                    alt="Illustration ordinateur"
+                    class="tree-image"
+                  />
+                </div>
+              </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p class="footer__copyright">Copyright © 2022 CO2WEB. <br>All rights reserved</p>
+      <p class="footer__copyright">
+        Copyright © 2022 CO2WEB. <br />All rights reserved
+      </p>
       <nav class="footer__nav">
         <ul class="footer__nav__ul">
           <li><a href="/index.html">Accueil</a></li>
@@ -104,5 +119,37 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll(".swiper-slide");
+        const nextButton = document.querySelector(".swiper-button-next img");
+        const prevButton = document.querySelector(".swiper-button-prev img");
+    
+        let currentSlide = 0;
+    
+        const showSlide = (index) => {
+          slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "flex" : "none";
+          });
+        };
+    
+        nextButton.addEventListener("click", () => {
+          if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            showSlide(currentSlide);
+          }
+        });
+    
+        prevButton.addEventListener("click", () => {
+          if (currentSlide > 0) {
+            currentSlide--;
+            showSlide(currentSlide);
+          }
+        });
+    
+        showSlide(currentSlide);
+      });
+    </script>
+    
   </body>
 </html>
