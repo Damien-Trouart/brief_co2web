@@ -30,8 +30,7 @@
 
 
 
-  @media(max-width: 360px) {
-    border: 1px solid black;
+  @media(max-width: 768px) {
     min-width: 100vw;
     flex-shrink: 0;
     scroll-snap-align: end start;
