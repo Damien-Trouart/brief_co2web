@@ -30,17 +30,17 @@
   }
   h1 {
     font-family: "Montserrat", sans-serif;
-    font-size: 3rem;
+    font-size: 3rem; //3rem
   }
 
   .text__lorem {
     font-family: "Roboto";
-    font-size: 20px;
+    font-size: 20px; //20px
     color: black;
     text-align: start;
-    line-height: 2.5rem;
-    letter-spacing: 0.08em;
-    width: 70%;
+    line-height: 2.5rem; //2.5rem
+    letter-spacing: 0.8em; //0.8em
+    width: 70%; //70%
   }
 }
 
@@ -54,7 +54,38 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 3330px) {
+  .section__main {
+    padding-left: 6em;
+  }
+  .div__main__left {
+    margin-top: 10%;
+    .text__position {
+      padding-top: 20em;
+    }
+    h1 {
+      font-size: 6rem;
+    }
+    .text__lorem {
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 4rem;
+      letter-spacing: 0.15em;
+      width: 90%;
+    }
+  }
+
+  .btn__position {
+    padding-top: 1.5rem;
+
+    p {
+      padding: 0 2rem;
+      font-size: 48px;
+    }
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 3329px) {
   .container__main {
     justify-content: flex-start;
     .img_home {
