@@ -16,6 +16,8 @@
     <div class="image bottom-left"></div>
     <div class="image bottom-right"></div>
     <div class="image top-right"></div>
+    <div class="image top-right2"></div>
+    <div class="image top-right3"></div>
 
     <header class="header">
         <div class="header__logo">
@@ -65,11 +67,17 @@
                     <textarea id="message" name="message" required placeholder="Message"></textarea>
                 </div>
                 <div class="form-group submit-btn-container">
-                    <button type="submit" id="submit-btn">Commencer</button>
+                    <button type="button" id="open-popup-btn">Commencer</button>
                 </div>
             </form>
         </div>
     </main>
+
+    <!-- Popup pour afficher le résultat -->
+    <div id="popup" class="popup">
+        <p id="result-message">Votre message a bien été envoyé.</p>
+        <button id="close-popup" class="close-popup">Fermer</button>
+    </div>
 
     <footer class="footer">
         <nav class="footer__nav">
@@ -83,5 +91,7 @@
           </ul>
         </nav>
     </footer>
+
+    <script src="scriptContact.js"></script>
 </body>
 </html>
