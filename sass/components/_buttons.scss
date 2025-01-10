@@ -9,10 +9,10 @@
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   font-size: 18px;
   transition: background 0.5s ease;
-  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
+  box-shadow: 0 8px 6px rgba(0, 128, 0, 0.3); /* Ombre autour du bouton */
 
   &:hover {
     background: $darkestgreen; /* Couleur de fond lors du survol */
@@ -27,7 +27,7 @@
   border: 2px solid $darkgreen;
   border-radius: 30px;
   cursor: pointer;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   font-size: 18px;
 
   &:hover {
@@ -40,8 +40,10 @@
 @media (max-width: 360px) {
   .btn__commencer {
     padding: 1rem 1rem;
+    font-size: 22px;
   }
   .btn__savoir {
     padding: 1rem 1rem;
+    font-size: 22px;
   }
 }
