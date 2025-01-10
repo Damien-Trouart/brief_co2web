@@ -1,5 +1,7 @@
 .body_scndpage {
   overflow: hidden;
+  border: 1px solid orange;
+  margin: 0;
 }
 
 
@@ -55,14 +57,17 @@
 
 
     &--middlebloc {
+      @include bloc_mode-emploi; //réaplication du mixin, problème de spécificité sinon
+
       border: 1em solid transparent;
       border-radius: 2rem;
       box-shadow: 0px 0px 20px -10px black;
       z-index: 1; //s'assurer que le bloc soit devant les images
 
 
+
       @media (max-width:360px) {
-        border: none;
+        border-radius: 0;
         box-shadow: none;
         margin: 0;
       }
@@ -78,7 +83,7 @@
     &--bottomleft,
     &--topright {
       position: absolute;
-      z-index: -1; //s'assurer que les images oient bien derrière la div
+      z-index: -1; //s'assurer que ces images oient bien en arrière plan
       width: 10rem;
 
       @media (max-width:360px) {
@@ -98,6 +103,7 @@
 
 
     &__front {
+      //div englobant le bloc central et son img ellipse verte en haut à droite
       z-index: 0;
       position: relative;
       margin: 2.5rem 7rem 3rem 3.5rem; //margins particulières pour positionner correctement les images
@@ -107,6 +113,7 @@
       }
 
       &--ellipse {
+        //image ellipse verte en haut à droite du bloc central
         z-index: 2;
         position: absolute;
         top: 0;
