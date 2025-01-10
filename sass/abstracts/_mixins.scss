@@ -32,9 +32,9 @@
 
   @media(max-width: 360px) {
     border: 1px solid black;
-    min-width: 100%;
+    min-width: 100vw;
     flex-shrink: 0;
-    scroll-snap-align: start;
+    scroll-snap-align: end start;
 
     img {
       width: 8rem;

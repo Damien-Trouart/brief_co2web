@@ -83,6 +83,7 @@
           box-shadow: none;
           margin: 0;
 
+
         }
       }
     }
@@ -123,6 +124,8 @@
 
         @media (max-width:360px) {
           margin: 0;
+          display: flex;
+
         }
 
         &--ellipse {
