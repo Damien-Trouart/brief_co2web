@@ -89,28 +89,28 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
 
         // Positionner les images à l'extérieur du formulaire
         &.top-left {
-            top: 150px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
-            left: 300px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
+            top: 60px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
+            left: 240px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
             background-image: url('../../img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
             background-size: contain;
             background-repeat: no-repeat;
-            width: 250px;
-            height: 250px;
+            width: 350px;
+            height: 350px;
         }
 
         &.bottom-left {
-            bottom: 180px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
+            bottom: 220px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
             left: 270px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
             background-image: url('../../img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
             background-size: contain;
             background-repeat: no-repeat;
-            width: 260px;
-            height: 250px;
+            width: 300px;
+            height: 300px;
         }
 
         &.bottom-right {
-            bottom: 200px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
-            right: 260px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+            bottom: 220px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+            right: 290px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
             background-image: url('../../img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
             background-size: contain;
             background-repeat: no-repeat;
@@ -119,13 +119,13 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         }
 
         &.top-right {
-            top: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            right: -30px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            background-image: url('/home/utilisateur/Documents/brief_co2web/img/topright.svg'); // URL de l'image pour le coin supérieur droit
+            top: 140px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            right: 340px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            background-image: url('../../img/Ellipse\ 61\(1\).svg'); // URL de l'image pour le coin supérieur droit
             background-size: contain;
             background-repeat: no-repeat;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
         }
     }
 
