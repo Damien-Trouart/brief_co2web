@@ -18,18 +18,16 @@
 		}
 
 		h1 {
-			margin-bottom: 0; // enlever l'espace par default lié au prorpiété de h1
+			// enlever l'espace par default lié au prorpiété de h1
+			margin-bottom: 0;
 		}
 	}
 
 	.main-scndpage {
 		margin: 0em 10em;
 		display: flex;
-		justify-content: space-evenly; // repartition égale horizontalement entre les 3 blocs
-
-		@media(max-width: 1366px) {
-			padding: 3rem 0rem;
-		}
+		// repartition égale horizontalement entre les 3 blocs
+		justify-content: space-evenly;
 
 		@media(max-width: 768px) {
 			margin: 0;
@@ -39,11 +37,13 @@
 		}
 
 		&__bloc {
-			@include bloc_mode-emploi; //mixin pour le format bloc
+			//mixin pour le format bloc
+			@include bloc_mode-emploi;
 
 			&--leftbloc,
 			&--rightbloc {
-				margin-top: 2rem; // espace au dessus des blocs gauche et droit pour aligner avec le bloc central
+				// espace au dessus des blocs gauche et droit pour aligner avec le bloc central
+				margin-top: 2rem;
 
 				@media (max-width: 768px) {
 					margin-top: 0;
@@ -51,11 +51,13 @@
 			}
 
 			&--middlebloc {
-				@include bloc_mode-emploi; //réaplication du mixin, problème de spécificité sinon
+				@include bloc_mode-emploi;
+				//réaplication du mixin, problème de spécificité sinon
 				border: 1em solid transparent;
 				border-radius: 2rem;
 				box-shadow: 0px 0px 20px -10px black;
-				z-index: 1; //s'assurer que le bloc soit devant les images
+				//s'assurer que le bloc soit devant les images
+				z-index: 1;
 
 				@media (max-width:768px) {
 					border-radius: 0;
@@ -72,7 +74,8 @@
 			&--bottomleft,
 			&--topright {
 				position: absolute;
-				z-index: -1; //s'assurer que ces images oient bien en arrière plan
+				//s'assurer que ces images oient bien en arrière plan
+				z-index: -1;
 				width: 10rem;
 
 				@media (max-width:768px) {
@@ -90,19 +93,20 @@
 				right: 0;
 			}
 
+			//div englobant le bloc central et son img ellipse verte en haut à droite
 			&__front {
-				//div englobant le bloc central et son img ellipse verte en haut à droite
 				z-index: 0;
 				position: relative;
-				margin: 2.5rem 7rem 3rem 3.5rem; //margins particulières pour positionner correctement les images
+				//margins particulières pour positionner correctement les images
+				margin: 2.5rem 7rem 3rem 3.5rem;
 
 				@media (max-width:768px) {
 					margin: 0;
 					display: flex;
 				}
 
+				//image ellipse verte en haut à droite du bloc central
 				&--ellipse {
-					//image ellipse verte en haut à droite du bloc central
 					z-index: 2;
 					position: absolute;
 					top: 0;
