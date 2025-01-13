@@ -7,16 +7,11 @@
 .realmain-scndpage {
 	@media(max-width: 360px) {
 		margin: 0;
-
 	}
 
 	.title-scndpage {
 		// mettre une espace à gauche du titre pour mieux le placer
 		padding-left: 10rem;
-
-		@media(max-width: 768px) {
-			padding-left: 1rem;
-		}
 
 		h1 {
 			// enlever l'espace par default lié au prorpiété de h1
@@ -30,15 +25,6 @@
 		// repartition égale horizontalement entre les 3 blocs
 		justify-content: space-evenly;
 
-		@media(max-width: 768px) {
-			margin: 0;
-			padding-bottom: 0;
-			scroll-snap-type: x mandatory;
-			overflow-x: scroll;
-		}
-
-
-
 		&__bloc {
 			//mixin pour le format bloc
 			@include bloc_mode-emploi;
@@ -47,10 +33,6 @@
 			&--rightbloc {
 				// espace au dessus des blocs gauche et droit pour aligner avec le bloc central
 				margin-top: 2rem;
-
-				@media (max-width: 768px) {
-					margin-top: 0;
-				}
 			}
 
 			&--middlebloc {
@@ -61,16 +43,12 @@
 				box-shadow: 0px 0px 20px -10px black;
 				//s'assurer que le bloc soit devant les images
 				z-index: 1;
-
-				@media (max-width:768px) {
-					border-radius: 0;
-					box-shadow: none;
-					margin: 0;
-				}
+				margin: 0;
 			}
 		}
 
 		&__imgbloc {
+			//bloc du milieu comprenant les images
 			position: relative;
 			z-index: 0;
 
@@ -80,10 +58,6 @@
 				//s'assurer que ces images oient bien en arrière plan
 				z-index: -1;
 				width: 10rem;
-
-				@media (max-width:768px) {
-					display: none;
-				}
 			}
 
 			&--bottomleft {
@@ -103,19 +77,68 @@
 				//margins particulières pour positionner correctement les images
 				margin: 2.5rem 7rem 3rem 3.5rem;
 
-				@media (max-width:768px) {
-					margin: 0;
-					display: flex;
-				}
-
 				//image ellipse verte en haut à droite du bloc central
 				&--ellipse {
 					z-index: 2;
 					position: absolute;
 					top: 0;
 					right: 0;
+				}
+			}
+		}
+	}
+}
 
-					@media (max-width:768px) {
+
+
+
+//dimensions pour phone et tablette
+
+@media (max-width:768px) {
+
+
+	.realmain-scndpage {
+		position: relative;
+
+		.title-scndpage {
+			padding-left: 1rem;
+		}
+
+		.main-scndpage {
+			margin: 0;
+			padding-bottom: 0;
+			scroll-snap-type: x mandatory;
+			overflow-x: scroll;
+
+			&__bloc {
+
+				&--leftbloc,
+				&--rightbloc {
+					margin-top: 0;
+				}
+
+				&--middlebloc {
+					border-radius: 0;
+					box-shadow: none;
+					margin: 0;
+				}
+			}
+
+			//div englobant le bloc du milieu et les images
+			&__imgbloc {
+
+				&--bottomleft,
+				&--topright {
+					display: none;
+				}
+
+				//div englobant le bloc central et son img ellipse verte en haut à droite
+				&__front {
+					margin: 0;
+					display: flex;
+
+					//image ellipse verte en haut à droite du bloc central
+					&--ellipse {
 						display: none;
 					}
 				}
