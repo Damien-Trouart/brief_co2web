@@ -61,7 +61,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1920px) and (max-width: 3329px) {
   .btn__commencer {
     border-radius: 45px;
     padding: 1rem;
@@ -71,5 +71,22 @@
     border-radius: 45px;
     padding: 1rem;
     font-size: 26px;
+  }
+}
+
+@media (min-width: 3330px) {
+  .btn__commencer {
+    padding: 3rem;
+    font-size: 40px;
+    border-radius: 80px;
+    box-shadow: 0 20px 15px rgba(0, 128, 0, 0.4);
+  }
+  .btn__savoir {
+    padding: 3rem;
+    font-size: 40px;
+    border-radius: 80px;
+    &:hover {
+      box-shadow: 0 15px 25px rgba(0, 128, 0, 0.4); /* Ombre plus prononcée lors du survol */
+    }
   }
 }
