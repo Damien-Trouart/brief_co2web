@@ -7,7 +7,6 @@
 }
 
 .container__main {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -30,17 +29,17 @@
   }
   h1 {
     font-family: "Montserrat", sans-serif;
-    font-size: 3rem; //3rem
+    font-size: 3rem;
   }
 
   .text__lorem {
     font-family: "Roboto";
-    font-size: 20px; //20px
+    font-size: 20px;
     color: black;
     text-align: start;
-    line-height: 2.5rem; //2.5rem
-    letter-spacing: 0.8em; //0.8em
-    width: 70%; //70%
+    line-height: 2.5rem;
+    letter-spacing: 0.8em;
+    width: 70%;
   }
 }
 
@@ -48,15 +47,28 @@
   display: flex;
   flex-direction: row;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 
   p {
     padding: 0 1rem;
   }
 }
 
-@media (min-width: 3330px) {
+@media (min-width: 3335px) {
   .section__main {
     padding-left: 6em;
+  }
+  .container__main {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .img_home {
+      position: absolute; // 親要素を基準に配置
+      top: -180px; // 画像の上端を少しずらす
+      right: -180px; // 画像の右端を少しずらす
+      width: 50%; // 700px画像サイズ（デザインに合わせて調整）
+      height: auto;
+    }
   }
   .div__main__left {
     margin-top: 10%;
@@ -77,6 +89,7 @@
 
   .btn__position {
     padding-top: 1.5rem;
+    padding-bottom: 2rem;
 
     p {
       padding: 0 2rem;
@@ -85,12 +98,17 @@
   }
 }
 
-@media (min-width: 1920px) and (max-width: 3329px) {
+@media (min-width: 1920px) and (max-width: 3334px) {
   .container__main {
-    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
     .img_home {
+      position: absolute;
+      top: -100px;
+      right: -100px;
       width: 50%;
-      height: 50%;
+      height: auto;
     }
   }
   .div__main__left {
@@ -115,17 +133,49 @@
   }
 } /* @media (max-width: 1920px) --end */
 
-@media (min-width: 1368px) and (max-width: 1919px) {
-  .div__main__left {
-    margin-top: 0;
+@media (min-width: 1366px) and (max-width: 1919px) {
+  .container__main {
     width: 100%;
+    position: relative;
+    overflow: hidden;
+    .img_home {
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 50%;
+      height: auto;
+    }
+  }
+  .div__main__left {
+    width: 50%;
+
+    .text__position {
+      padding-bottom: 5em;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+
+    .text__lorem {
+      font-size: 18px;
+      line-height: 1.8rem;
+      letter-spacing: 0.1em;
+      width: 80%;
+    }
+  }
+  .btn__position {
+    padding-bottom: 1rem;
   }
 } /* @media (max-width: 1368px) --end */
 
-@media (min-width: 768px) and (max-width: 1367px) {
-  .section__main {
-    padding-left: 2em;
+@media (min-width: 768px) and (max-width: 1365px) {
+  .body__home {
+    margin-top: 0;
   }
+  .main__home {
+    margin-top: 0;
+  }
+
   .container__main {
     width: 100%;
     display: flex;
@@ -134,7 +184,7 @@
     .img_home {
       order: 1;
       margin: 0 0 0 auto;
-      padding-top: 3rem;
+
       width: 40%;
     }
 
@@ -153,12 +203,16 @@
 
       .text__lorem {
         padding-left: 0;
-        font-size: 25px;
+        font-size: 18px;
+        letter-spacing: 0.2em;
         width: 90%;
       }
     }
+    .btn__position {
+      padding-bottom: 1.5rem;
+    }
     p {
-      padding: 0 2rem;
+      padding: 0 1rem;
       font-size: 25px;
     }
   } /*.container__main --end */
@@ -174,7 +228,7 @@
   }
 
   .section__main {
-    padding: 0em 1em;
+    padding-left: 1em;
   }
 
   .container__main {
@@ -192,8 +246,6 @@
     order: 2;
     width: 100%;
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
 
     .text__position {
       padding-top: 3em;
@@ -209,14 +261,14 @@
       line-height: 1.3rem;
       letter-spacing: normal;
       font-size: 16px;
-      width: 100%;
+      width: 90%;
     }
   }
 
   .btn__position {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     padding-bottom: 1rem;
 
     p {
