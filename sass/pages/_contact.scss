@@ -1,6 +1,6 @@
 .contact-page {
     position: relative;
-    overflow-x: hidden; // Empêche le défilement horizontal
+    overflow-x: hidden;
 
     .title-container {
         text-align: center;
@@ -14,37 +14,37 @@
     }
 
     .container {
-        background: rgba(255, 255, 255, 0.1); // Fond translucide
-        backdrop-filter: blur(10px); // Flou de l'arrière-plan
-        padding: 80px; // Augmente les marges intérieures
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 80px;
         border-radius: 30px;
-        box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), -15px -15px 30px rgba(255, 255, 255, 0.9), inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé
-        border: 2px solid $lightestgreen; // Bordure verte claire
+        box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), -15px -15px 30px rgba(255, 255, 255, 0.9), inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9);
+        border: 2px solid $lightestgreen;
         width: 900px;
-        height: auto; // Ajuste la hauteur automatiquement
+        height: auto;
         text-align: center;
-        margin: 0 auto; // Centre le conteneur horizontalement
-        margin-bottom: 60px; // Réduit la marge en bas de l'encadré du formulaire
+        margin: 0 auto;
+        margin-bottom: 60px;
         margin-top: 20px;
-        position: relative; // Permet le positionnement absolu des images
-        z-index: 1; // Assurez-vous que le conteneur est au-dessus des images
-        overflow: hidden; // Empêche les éléments de déborder du conteneur
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
 
         .form-group {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 30px; // Augmente la marge entre les groupes de champs
+            margin-bottom: 30px;
 
             .form-column {
-                width: 40%; // Réduit la largeur des colonnes
-                margin: 0 20px; // Augmente les marges entre les colonnes
+                width: 40%;
+                margin: 0 20px;
 
                 label {
                     display: block;
                     margin-bottom: 10px;
                     color: black;
                     text-align: left;
-                    font-size: 1.2em; // Augmente légèrement la taille de l'écriture des labels
+                    font-size: 1.2em;
                 }
 
                 input {
@@ -54,18 +54,18 @@
                     margin-bottom: 10px;
                     border: none;
                     border-radius: 4px;
-                    background: rgba(255, 255, 255, 0.1); // Fond translucide
-                    backdrop-filter: blur(10px); // Flou de l'arrière-plan
-                    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé
-                    border-bottom: 2px solid $border-color; // Bordure inférieure grise avec opacité
+                    background: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(10px);
+                    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.9);
+                    border-bottom: 2px solid $border-color;
 
                     &::placeholder {
-                        color: $placeholder-color; // Couleur grise avec opacité pour les placeholders
-                        font-size: 1.2em; // Augmente légèrement la taille de l'écriture des placeholders
+                        color: $placeholder-color;
+                        font-size: 1.2em;
                     }
 
                     &:hover {
-                        box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.2), inset -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé au survol
+                        box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.2), inset -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.9);
                     }
                 }
             }
@@ -78,12 +78,12 @@
                 label {
                     width: auto;
                     margin-bottom: 10px;
-                    font-size: 1.2em; // Augmente légèrement la taille de l'écriture des labels
-                    margin-left: 10px; // Déplace légèrement le label vers la droite
+                    font-size: 1.2em;
+                    margin-left: 10px;
                 }
 
                 textarea {
-                    width: calc(100% - 180px); // Ajuste la largeur pour s'étendre jusqu'au bouton
+                    width: calc(100% - 180px);
                     padding: 10px;
                     box-sizing: border-box;
                     margin-bottom: 10px;
@@ -91,18 +91,18 @@
                     border-radius: 4px;
                     height: 100px;
                     resize: vertical;
-                    background: rgba(255, 255, 255, 0.1); // Fond translucide
-                    backdrop-filter: blur(10px); // Flou de l'arrière-plan
-                    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé
-                    border-bottom: 2px solid $border-color; // Bordure inférieure grise avec opacité
+                    background: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(10px);
+                    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.9);
+                    border-bottom: 2px solid $border-color;
 
                     &::placeholder {
-                        color: $placeholder-color; // Couleur grise avec opacité pour les placeholders
-                        font-size: 1.2em; // Augmente légèrement la taille de l'écriture des placeholders
+                        color: $placeholder-color;
+                        font-size: 1.2em;
                     }
 
                     &:hover {
-                        box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.2), inset -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé au survol
+                        box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.2), inset -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.9);
                     }
                 }
             }
@@ -110,25 +110,25 @@
 
         .submit-btn-container {
             display: flex;
-            justify-content: flex-end; // Aligne le bouton à droite
-            margin-top: 20px; // Ajoute une marge en haut pour l'alignement
-            margin-right: 40px; // Déplace le bouton légèrement vers la gauche
-            margin-bottom: -20px; // Réduit l'espace en dessous du bouton
+            justify-content: flex-end;
+            margin-top: 20px;
+            margin-right: 40px;
+            margin-bottom: -20px;
 
             #open-popup-btn {
-                background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
+                background: linear-gradient(45deg, $lightestgreen, $darkgreen);
                 color: $primary-color;
-                padding: 12px 25px; // Augmente légèrement la taille du bouton
+                padding: 12px 25px;
                 border: none;
                 border-radius: 30px;
                 cursor: pointer;
-                font-size: 18px; // Augmente légèrement la taille de la police du bouton
+                font-size: 18px;
                 transition: background 0.5s ease, box-shadow 0.5s ease;
-                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.9), inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.9), inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9);
 
                 &:hover {
-                    background: $darkestgreen; /* Couleur de fond lors du survol */
-                    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2), -15px -15px 30px rgba(255, 255, 255, 0.9), inset 10px 10px 20px rgba(0, 0, 0, 0.1), inset -10px -10px 20px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé
+                    background: $darkestgreen;
+                    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2), -15px -15px 30px rgba(255, 255, 255, 0.9), inset 10px 10px 20px rgba(0, 0, 0, 0.1), inset -10px -10px 20px rgba(255, 255, 255, 0.9);
                 }
             }
         }
@@ -140,110 +140,105 @@
         }
     }
 
-    // Modification des images placées dans les coins
     .image {
         position: absolute;
-        pointer-events: none; // Permet de cliquer à travers l'image
+        pointer-events: none;
 
-        // Positionner les images à l'extérieur du formulaire
         &.top-left {
-            top: 60px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
-            left: 200px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
-            background-image: url('/img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
+            top: 20px;
+            left: 20px;
+            background-image: url('/img/Groupe27.svg');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 380px;
-            height: 360px;
+            width: 180px;
+            height: 180px;
         }
 
         &.bottom-left {
-            bottom: 120px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
-            left: 170px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
-            background-image: url('/img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
+            bottom: 20px;
+            left: 20px;
+            background-image: url('/img/TracÔÇÜ76.svg');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 320px;
-            height: 320px;
+            width: 160px;
+            height: 160px;
         }
 
         &.bottom-right {
-            bottom: 100px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
-            right: 190px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
-            background-image: url('/img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
+            bottom: 20px;
+            right: 20px;
+            background-image: url('/img/TracÔÇÜ69.svg');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 360px;
-            height: 360px;
+            width: 180px;
+            height: 180px;
         }
 
         &.top-right {
-            top: 110px; // Conserver la position initiale
-            right: 340px; // Conserver la position initiale
-            background-image: url('/img/Ellipse 61(1).svg'); // URL de l'image pour le coin supérieur droit
+            top: 20px;
+            right: 20px;
+            background-image: url('/img/Ellipse 61(1).svg');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 200px;
-            height: 250px;
-            z-index: 2; // Assurez-vous que l'image est au-dessus du conteneur
+            width: 100px;
+            height: 125px;
+            z-index: 2;
         }
 
         &.top-right2 {
-            top: 60px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            right: 160px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            background-image: url('/img/Ellipse 62.svg'); // URL de l'image pour le coin supérieur droit
+            top: 20px;
+            right: 20px;
+            background-image: url('/img/Ellipse 62.svg');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 120px;
-            height: 150px;
+            width: 60px;
+            height: 75px;
         }
 
         &.top-right3 {
-            top: 200px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            right: 170px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            background-image: url('/img/Ellipse 63.svg'); // URL de l'image pour le coin supérieur droit
+            top: 20px;
+            right: 20px;
+            background-image: url('/img/Ellipse 63.svg');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 90px;
-            height: 150px;
+            width: 45px;
+            height: 75px;
         }
     }
 
-    /* Style pour les champs de texte avec bordure en bas */
     .bottom-border {
-        border: none; /* Supprime toutes les bordures */
-        border-bottom: 2px solid $border-color; /* Ajoute une bordure en bas */
+        border: none;
+        border-bottom: 2px solid $border-color;
         color: grayscale(50%);
     }
 
-    /* Pseudo-élément pour la bordure en bas avec grayscale */
     .bottom-border::after {
         content: '';
         position: absolute;
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 4px; /* Réglez la hauteur de la bordure ici */
-        background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire avec deux couleurs */
-        filter: grayscale(100%); /* Applique le filtre grayscale */
+        height: 4px;
+        background: linear-gradient(45deg, $lightestgreen, $darkgreen);
+        filter: grayscale(100%);
     }
 
-    /* Style pour la popup */
     .popup {
-      display: none; /* Masqué par défaut */
+      display: none;
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(255, 255, 255, 0.1); // Fond translucide
-      backdrop-filter: blur(10px); // Flou de l'arrière-plan
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
       padding: 20px;
       border-radius: 20px;
       z-index: 999;
-      width: 100%; /* Ajuste la largeur à 100% */
-      max-width: 500px; /* Largeur maximale pour ne pas dépasser de l'écran */
+      width: 100%;
+      max-width: 500px;
       text-align: center;
-      box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1), -20px -20px 60px rgba(255, 255, 255, 0.9), inset 10px 10px 20px rgba(0, 0, 0, 0.1), inset -10px -10px 20px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé
-      border: 4px solid $lightestgreen; /* Bordure verte */
+      box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1), -20px -20px 60px rgba(255, 255, 255, 0.9), inset 10px 10px 20px rgba(0, 0, 0, 0.1), inset -10px -10px 20px rgba(255, 255, 255, 0.9);
+      border: 4px solid $lightestgreen;
     }
 
     #result-message {
@@ -252,7 +247,7 @@
     }
 
     .close-popup {
-      background: linear-gradient(45deg, $lightestgreen, $darkgreen); /* Dégradé linéaire */
+      background: linear-gradient(45deg, $lightestgreen, $darkgreen);
       color: $primary-color;
       padding: 10px 20px;
       border: none;
@@ -260,12 +255,130 @@
       cursor: pointer;
       font-size: 16px;
       transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.9), inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.9), inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9);
 
       &:hover {
-        background: $darkestgreen; /* Couleur de fond lors du survol */
-        box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2), -15px -15px 30px rgba(255, 255, 255, 0.9), inset 10px 10px 20px rgba(0, 0, 0, 0.1), inset -10px -10px 20px rgba(255, 255, 255, 0.9); // Effet néumorphisme avancé
-        border-color: $darkgreen; /* Bordure verte plus foncée au survol */
+        background: $darkestgreen;
+        box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2), -15px -15px 30px rgba(255, 255, 255, 0.9), inset 10px 10px 20px rgba(0, 0, 0, 0.1), inset -10px -10px 20px rgba(255, 255, 255, 0.9);
+        border-color: $darkgreen;
       }
+    }
+
+    .header__burger {
+        display: none;
+        cursor: pointer;
+
+        .burger-icon {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            span {
+                width: 100%;
+                height: 3px;
+                background-color: black;
+            }
+        }
+    }
+
+    @media (max-width: 1366px) {
+        .container {
+            width: 80%;
+            padding: 40px;
+        }
+
+        .image {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            width: 90%;
+            padding: 20px;
+        }
+
+        .form-group {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .form-column {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .header__nav {
+            display: none;
+        }
+
+        .header__burger {
+            display: block;
+        }
+
+        .header__nav.active {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        .image {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .container {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .header__nav {
+            display: none;
+        }
+
+        .header__burger {
+            display: block;
+        }
+
+        .header__nav.active {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        .image {
+            display: none !important;
+        }
     }
 }

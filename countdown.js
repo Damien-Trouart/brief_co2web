@@ -20,4 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
           document.getElementById('countdown').innerHTML = 'La fonctionnalité est maintenant disponible!';
       }
   }, 1000);
+
+  const burgerIcon = document.querySelector('.burger-icon');
+  const nav = document.querySelector('.header__nav');
+
+  burgerIcon.addEventListener('click', function() {
+    nav.classList.toggle('active');
+  });
 });
