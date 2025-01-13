@@ -19,7 +19,7 @@
 		<nav class="header__nav">
 			<ul class="header__nav__ul">
 				<li><a href="/index.html">Accueil</a></li>
-				<li class="active"><a href="/mode-demploi.html">Mode d'emploi</a></li>
+				<li class="activated"><a href="/mode-demploi.html">Mode d'emploi</a></li>
 				<li><a href="/trouver-velib.html">Trouver un velib</a></li>
 				<li><a href="/calculateur.html">Calculateur</a></li>
 				<li><a href="/about.html">A propos</a></li>
@@ -41,10 +41,8 @@
 						dolore quaerat doloremque.</p>
 				</div>
 				<div class="main-scndpage__imgbloc">
-					<img class="main-scndpage__imgbloc--bottomleft" src="/img/bottomleft.svg"
-						alt="bulles de couleur verte clair">
-					<img class="main-scndpage__imgbloc--topright" src="/img/topright.svg"
-						alt="bulles de couleur verte foncée">
+					<img class="main-scndpage__imgbloc--bottomleft" src="/img/bottomleft.svg" alt="bulles de couleur verte clair">
+					<img class="main-scndpage__imgbloc--topright" src="/img/topright.svg" alt="bulles de couleur verte foncée">
 					<div class="main-scndpage__imgbloc__front">
 						<img class="main-scndpage__imgbloc__front--ellipse" src="/img/Ellipse 61.svg" alt="green ellipse">
 						<div class="main-scndpage__bloc main-scndpage__bloc--middlebloc">
@@ -65,8 +63,15 @@
 						laborum earum quisquam ipsum eaque
 						minima praesentium.</p>
 				</div>
+				<a class="previous-bloc" onclick="plusSlides(-1)">❮</a>
+				<a class="next-bloc" onclick="plusSlides(1)">❯</a>
 			</div>
-		</div>
+			<br>
+			<div class="slide-dot">
+				<span class="dot_scndpage" onclick="currentSlide(1)"></span>
+				<span class="dot_scndpage" onclick="currentSlide(2)"></span>
+				<span class="dot_scndpage" onclick="currentSlide(3)"></span>
+			</div>
 	</main>
 	<footer class="footer">
 		<p class="footer__copyright">Copyright © 2022 CO2WEB. <br>All rights reserved.</p>
@@ -82,5 +87,8 @@
 		</nav>
 	</footer>
 </body>
+
+
+<script src="mode-demploi.js"></script>
 
 </html>
