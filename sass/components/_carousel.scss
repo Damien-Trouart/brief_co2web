@@ -21,11 +21,12 @@
 
 .slide-dot {
   position: absolute;
-  left: 43%;
-  bottom: 2em;
+  left: 50%;
+  bottom: 0.75em;
   margin: 0;
   padding: 0;
   z-index: 3;
+  transform: translateX(-50%);
 }
 
 .dot_scndpage {
@@ -36,7 +37,14 @@
   background-color: $darkestgreen;
   border-radius: 50%;
   display: inline-block;
+  transition: background-color 0.3s ease;
+  opacity: 0.5;
 
+}
+
+.dot_scndpage.active {
+  background-color: $darkestgreen;
+  opacity: 1;
 }
 
 
