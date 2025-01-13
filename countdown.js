@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById('days').textContent = days;
-      document.getElementById('hours').textContent = hours;
-      document.getElementById('minutes').textContent = minutes;
-      document.getElementById('seconds').textContent = seconds;
+      document.getElementById('days').innerHTML = `${days}<br><span>Jours</span>`;
+      document.getElementById('hours').innerHTML = `${hours}<br><span>Heures</span>`;
+      document.getElementById('minutes').innerHTML = `${minutes}<br><span>Minutes</span>`;
+      document.getElementById('seconds').innerHTML = `${seconds}<br><span>Secondes</span>`;
 
       if (distance < 0) {
           clearInterval(countdown);

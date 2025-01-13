@@ -1,10 +1,3 @@
-$primary-color: #ffffff; // Exemple de couleur primaire
-$lightestgreen: #a3e063; // Exemple de couleur verte claire
-$darkgreen: #6cbb4a; // Exemple de couleur verte foncée
-$darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
-$placeholder-color: rgba(0, 0, 0, 0.4); // Couleur grise avec opacité pour les placeholders
-$border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordures
-
 .contact-page {
     position: relative;
     overflow-x: hidden; // Empêche le défilement horizontal
@@ -90,7 +83,7 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
                 }
 
                 textarea {
-                    width: 85%; // Augmente la longueur du textarea
+                    width: calc(100% - 180px); // Ajuste la largeur pour s'étendre jusqu'au bouton
                     padding: 10px;
                     box-sizing: border-box;
                     margin-bottom: 10px;
@@ -151,7 +144,6 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
     .image {
         position: absolute;
         pointer-events: none; // Permet de cliquer à travers l'image
-        z-index: 0; // Assurez-vous que l'image est derrière le formulaire
 
         // Positionner les images à l'extérieur du formulaire
         &.top-left {
@@ -166,7 +158,7 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
 
         &.bottom-left {
             bottom: 120px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
-            left: 190px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
+            left: 170px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
             background-image: url('/img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
             background-size: contain;
             background-repeat: no-repeat;
@@ -176,7 +168,7 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
 
         &.bottom-right {
             bottom: 100px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
-            right: 200px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+            right: 190px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
             background-image: url('/img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
             background-size: contain;
             background-repeat: no-repeat;
@@ -185,16 +177,17 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
         }
 
         &.top-right {
-            top: 110px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            right: 340px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            top: 110px; // Conserver la position initiale
+            right: 340px; // Conserver la position initiale
             background-image: url('/img/Ellipse 61(1).svg'); // URL de l'image pour le coin supérieur droit
             background-size: contain;
             background-repeat: no-repeat;
             width: 200px;
             height: 250px;
+            z-index: 2; // Assurez-vous que l'image est au-dessus du conteneur
         }
 
-&.top-right2 {
+        &.top-right2 {
             top: 60px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
             right: 160px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
             background-image: url('/img/Ellipse 62.svg'); // URL de l'image pour le coin supérieur droit
@@ -213,10 +206,6 @@ $border-color: rgba(0, 0, 0, 0.2); // Couleur grise avec opacité pour les bordu
             width: 90px;
             height: 150px;
         }
-
-
-
-
     }
 
     /* Style pour les champs de texte avec bordure en bas */

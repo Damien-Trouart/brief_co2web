@@ -1,19 +1,14 @@
-$primary-color: #ffffff; // Exemple de couleur primaire
-$lightestgreen: #a3e063; // Exemple de couleur verte claire
-$darkgreen: #6cbb4a; // Exemple de couleur verte foncée
-$darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
-
 .calculator-page {
     position: relative;
     overflow-x: hidden; // Empêche le défilement horizontal
 
     .title-container {
         text-align: center;
-        margin-top: 60px;
+        margin-top: 120px; // Augmentez la marge pour déplacer les titres plus bas
 
         h1, h2 {
             color: black;
-            font-size: 3rem;
+            font-size: 2.7rem;
             margin: 0;
         }
     }
@@ -28,9 +23,9 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         text-align: center;
         margin: 0 auto; // Centre le conteneur horizontalement
         margin-bottom: 200px;
-        margin-top: 20px;
+        margin-top: 40px; // Augmentez la marge pour déplacer le formulaire plus bas
         position: relative; // Permet le positionnement absolu des images
-        z-index: 1; // Assurez-vous que le conteneur est au-dessus des images
+        z-index: 1; // Assurez-vous que le conteneur est au-dessus des autres images
         overflow: hidden; // Empêche les éléments de déborder du conteneur
 
         .form-group {
@@ -67,6 +62,7 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
             font-size: 16px;
             transition: background 0.5s ease;
             box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5); /* Ombre autour du bouton */
+            margin-top: 40px; // Ajoute une marge en haut pour déplacer le bouton plus bas
 
             &:hover {
                 background: $darkestgreen; /* Couleur de fond lors du survol */
@@ -79,38 +75,43 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
             color: black;
             font-size: 18px;
         }
+
+        p {
+            font-size: 14px; // Réduit la taille de la police
+            margin-top: 40px; // Ajoute une marge en haut pour déplacer le paragraphe plus bas
+        }
     }
 
     // Modification des images placées dans les coins
     .image {
         position: absolute;
         pointer-events: none; // Permet de cliquer à travers l'image
-        z-index: 0; // Assurez-vous que l'image est derrière le formulaire
+        z-index: 0; // Assurez-vous que les autres images sont en dessous du formulaire
 
         // Positionner les images à l'extérieur du formulaire
         &.top-left {
-            top: 60px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
-            left: 240px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
+            top: 120px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
+            left: 230px; // Ajuster pour l'aligner à l'extérieur du coin supérieur gauche
             background-image: url('../../img/Groupe27.svg'); // URL de l'image pour le coin supérieur gauche
             background-size: contain;
             background-repeat: no-repeat;
-            width: 350px;
-            height: 350px;
+            width: 340px;
+            height: 340px;
         }
 
         &.bottom-left {
-            bottom: 220px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
-            left: 270px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
+            bottom: 250px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
+            left: 240px; // Ajuster pour l'aligner à l'extérieur du coin inférieur gauche
             background-image: url('../../img/TracÔÇÜ76.svg'); // URL de l'image pour le coin inférieur gauche
             background-size: contain;
             background-repeat: no-repeat;
             width: 300px;
-            height: 300px;
+            height: 280px;
         }
 
         &.bottom-right {
-            bottom: 220px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
-            right: 290px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+            bottom: 200px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
+            right: 270px; // Ajuster pour l'aligner à l'extérieur du coin inférieur droit
             background-image: url('../../img/TracÔÇÜ69.svg'); // URL de l'image pour le coin inférieur droit
             background-size: contain;
             background-repeat: no-repeat;
@@ -119,13 +120,34 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
         }
 
         &.top-right {
-            top: 140px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
-            right: 340px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            top: 220px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            right: 300px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
             background-image: url('../../img/Ellipse\ 61\(1\).svg'); // URL de l'image pour le coin supérieur droit
             background-size: contain;
             background-repeat: no-repeat;
-            width: 200px;
-            height: 200px;
+            width: 240px;
+            height: 180px;
+            z-index: 2; // Assurez-vous que cette image est au-dessus du conteneur
+        }
+
+        &.top-right22 {
+            top: 120px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            right: 220px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            background-image: url('../../img/Ellipse\ 62.svg'); // URL de l'image pour le coin supérieur droit
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 120px;
+            height: 100px;
+        }
+
+        &.top-right33 {
+            top: 240px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            right: 250px; // Ajuster pour l'aligner à l'extérieur du coin supérieur droit
+            background-image: url('../../img/Ellipse\ 63.svg'); // URL de l'image pour le coin supérieur droit
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 80px;
+            height: 120px;
         }
     }
 
@@ -200,3 +222,4 @@ $darkestgreen: #4a8c39; // Exemple de couleur verte très foncée
       }
     }
 }
+
