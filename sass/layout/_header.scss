@@ -8,30 +8,14 @@
   align-items: center;
   border-bottom: 1px solid lightgray;
 
-
-  @media(max-width: 768px) {
-    position: relative;
-  }
-
-
-
   &__logo {
     img {
       width: 8rem;
       padding: 0em 3em;
-
-      @media(max-width: 768px) {
-        padding-left: 1rem;
-      }
     }
   }
 
   &__nav {
-
-    @media(max-width: 768px) {
-      display: none;
-    }
-
 
     &__ul {
       display: flex;
@@ -51,6 +35,34 @@
       a:hover {
         text-decoration: underline;
         font-weight: 400;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+@media(max-width: 768px) {
+
+  .header {
+    position: relative;
+
+    &__logo {
+      img {
+
+        padding-left: 1rem;
+      }
+    }
+
+    &__nav {
+
+      @media(max-width: 768px) {
+        display: none;
       }
     }
   }
