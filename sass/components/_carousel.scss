@@ -16,21 +16,19 @@
   color: $lightgreen;
 }
 
-
-
-.prev {
-  left: 90px;
+.previous-bloc {
+  left: 10px;
 }
 
-.next {
-  right: 15px;
+.next-bloc {
+  right: 10px;
 }
 
-.prev:hover,
-.next:hover {
+
+.previous-bloc:hover,
+.next-bloc:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 .slide-dot {
   text-align: center;
@@ -52,12 +50,11 @@
 
 
 
-@media(max-width: 1920px) and (min-width:1366px) {
+@media(min-width:769px) {
 
   .previous-bloc,
   .next-bloc,
   .slide-dot {
     display: none;
   }
-
 }
