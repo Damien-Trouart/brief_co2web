@@ -77,34 +77,3 @@ $darkestgreen: #006400;
     height: 60vh;
   }
 }
-
-@media (max-width: 360px) {
-  .header__nav {
-    display: none;
-  }
-
-  /*.header__burger {
-    display: block;
-  }
-*/
-  .header__nav.active {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    z-index: 1000;
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      li {
-        margin: 10px 0;
-      }
-    }
-  }
-}
-
