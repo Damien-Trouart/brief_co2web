@@ -41,3 +41,10 @@ ___
 
 * [Dossier compressé de ressources type images](https://simplonline.co/classrooms/cd9c9cfe-5c16-432e-9761-c662ecb00454/briefs/28f1c4ea-10c7-4fca-8bf7-4e7c9c1e1c84) <br>
 Ces images sont stockées en local dans le dossier brief_co2web/img
+
+
+___
+
+## Auteurs:
+* [](https://github.com/Damien-Trouart)
+* []
