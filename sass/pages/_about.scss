@@ -1,4 +1,10 @@
 /* ========== Section: Project Slider ========== */
+#main-about {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .project-slider {
   position: relative;
 
@@ -60,7 +66,7 @@
       /* Image Feuille */
       .leaf-image {
         position: relative;
-        z-index: 2;
+        //z-index: 2;
         width: 50%;
         right: 655px;
         bottom: 40px;
@@ -71,14 +77,15 @@
 
   /* Slide 2: Tree Background */
   .slide-tree-background {
+    overflow: hidden;
+    z-index: -1;
     background-image: url("/img/Groupe146.svg");
     background-repeat: no-repeat;
-    background-position: right top;
-    position: absolute;
+    position: fixed;
+    background-position: right;
     background-size: contain;
-    top: -40px;
     width: 100%;
-    height: 1000px;
+    height: 900px;
   }
 
   /* Slide Text */
@@ -164,7 +171,7 @@
     }
 
     .description {
-      font-size: 1rem;
+      font-size: 1.5rem;
       line-height: 2;
       margin-left: 0; // Centrer le texte horizontalement
       margin-bottom: 0; // Réduit l'espace en bas
@@ -234,109 +241,63 @@
     }
   }
 }
-//* ===== Slider 1: Desktop: 1920x1080 ===== */
+/* ===== Media Queries ===== */
+@media (min-width: 3335px) {
+  .section__main {
+    padding-left: 6em;
+  }
+  .computer-image {
+    max-width: 60%;
+  }
+}
+/* Desktop: 1920x1080 */
 @media screen and (min-width: 1920px) {
-  .project-slider:first-of-type .slide-description {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-
-  .project-slider:first-of-type .description {
-    font-size: 20px;
-  }
-
-  .project-slider:first-of-type .slide-text {
-    padding: 50px;
-  }
-
-  .project-slider:first-of-type .slide-tree-background {
-    background-size: contain;
-    height: 20px;
+  .computer-image {
+    max-width: 60%;
   }
 }
 
-/* ===== Slider 1: Notebook: 1366x768 ===== */
+/* Notebook: 1366x768 */
 @media screen and (max-width: 1919px) and (min-width: 1366px) {
-  .project-slider:first-of-type .slide-description {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .project-slider:first-of-type .slide-text {
-    padding: 30px;
-  }
-
-  .project-slider:first-of-type .slide-tree-background {
-    background-size: 90% auto;
-    height: 900px;
-  }
-
-  .project-slider:first-of-type .swiper-button-prev img,
-  .project-slider:first-of-type .swiper-button-next img {
-    width: 50px;
+  .computer-image {
+    max-width: 50%;
   }
 }
 
-/* ===== Slider 1: Tablette: 768x1024 ===== */
+/* Tablet: 768x1024 */
 @media screen and (max-width: 1365px) and (min-width: 768px) {
-  .project-slider:first-of-type .slide-content {
+  .slide-content {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
   }
 
-  .project-slider:first-of-type .slide-description {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    text-align: center;
+  .computer-image {
+    max-width: 80%;
   }
 
-  .project-slider:first-of-type .slide-tree-background {
-    background-size: 80% auto;
-    height: 700px;
-  }
-
-  .project-slider:first-of-type .swiper-container {
-    max-width: 100%;
-    margin: 10px;
-  }
-
-  .project-slider:first-of-type .swiper-button-prev img,
-  .project-slider:first-of-type .swiper-button-next img {
-    width: 40px;
+  .leaf-image {
+    left: 0;
+    top: 10%;
   }
 }
 
-/* ===== Slider 1: Mobile: 360x800 ===== */
+/* Mobile: 360x800 */
 @media screen and (max-width: 767px) {
-  .project-slider:first-of-type .slide-content {
+  .slide-content {
     flex-direction: column;
     gap: 10px;
     align-items: center;
   }
 
-  .project-slider:first-of-type .slide-description {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin: 20px;
+  .slide-text {
     text-align: center;
   }
 
-  .project-slider:first-of-type .slide-text {
-    padding: 20px;
-  }
-
-  .project-slider:first-of-type .slide-tree-background {
-    background-size: cover;
-    height: 500px;
-  }
-
-  .project-slider:first-of-type .swiper-container {
+  .computer-image {
     max-width: 100%;
-    margin: 0;
   }
 
-  .project-slider:first-of-type .swiper-button-prev img,
-  .project-slider:first-of-type .swiper-button-next img {
-    width: 30px;
+  .leaf-image {
+    display: none; /* Cache l'image feuille sur mobile */
   }
 }
