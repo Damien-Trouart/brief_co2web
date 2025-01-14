@@ -4,9 +4,7 @@
 
 1.  ### Ouvrir le terminal:
 
-<img src="img/ctrl.png" width="50"> 
-<img src="img/alt.png" width="50"> 
-<img src="img/t.png" width="50"> 
+<img src="img/ctrl.png" width="50"> <img src="img/alt.png" width="50"> <img src="img/t.png" width="50"> 
 
 
 2.  ### Se déplacer dans le dossier souhaité avec la commande cd:
