@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }, 1000);
 
-  const burgerIcon = document.querySelector('.burger-icon');
+ /* const burgerIcon = document.querySelector('.burger-icon');
   const nav = document.querySelector('.header__nav');
 
   burgerIcon.addEventListener('click', function() {
     nav.classList.toggle('active');
-  });
+  }); */
 });

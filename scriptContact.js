@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Ajouter un gestionnaire d'événements pour fermer le popup lorsque l'utilisateur clique en dehors de celui-ci
-    window.addEventListener('click', function(event) {
+ /*   window.addEventListener('click', function(event) {
         if (event.target == popup) {
             popup.style.display = 'none';
         }
     });
-
+*/
     // Ajouter un gestionnaire d'événements pour le menu burger
-    burgerIcon.addEventListener('click', function() {
+  /*  burgerIcon.addEventListener('click', function() {
         nav.classList.toggle('active');
-    });
+    }); */
 });

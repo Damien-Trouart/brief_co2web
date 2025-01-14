@@ -41,7 +41,7 @@ $darkestgreen: #006400;
   }
 }
 
-.header__burger {
+/*.header__burger {
   display: none;
   cursor: pointer;
 
@@ -59,7 +59,7 @@ $darkestgreen: #006400;
     }
   }
 }
-
+*/
 @media (max-width: 1920px) {
   .countdown-section {
     height: 80vh;
@@ -83,10 +83,10 @@ $darkestgreen: #006400;
     display: none;
   }
 
-  .header__burger {
+  /*.header__burger {
     display: block;
   }
-
+*/
   .header__nav.active {
     display: block;
     position: absolute;

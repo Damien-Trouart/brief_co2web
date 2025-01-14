@@ -264,7 +264,7 @@
       }
     }
 
-    .header__burger {
+   /* .header__burger {
         display: none;
         cursor: pointer;
 
@@ -282,7 +282,7 @@
             }
         }
     }
-
+*/
     @media (max-width: 1366px) {
         .container {
             width: 80%;
@@ -314,10 +314,10 @@
             display: none;
         }
 
-        .header__burger {
+      /*  .header__burger {
             display: block;
         }
-
+*/
         .header__nav.active {
             display: block;
             position: absolute;
@@ -353,10 +353,10 @@
             display: none;
         }
 
-        .header__burger {
+     /*   .header__burger {
             display: block;
         }
-
+*/
         .header__nav.active {
             display: block;
             position: absolute;
