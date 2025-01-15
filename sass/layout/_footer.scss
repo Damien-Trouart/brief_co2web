@@ -1,5 +1,4 @@
 .footer {
-
   display: flex;
   justify-content: end; //avoir la liste de liens à droite
   border-top: 1px solid $lightgreen; //barre verte claire au dessu de la nav
@@ -30,7 +29,7 @@
           color: $darkestgreen;
           font-size: 1.25rem;
 
-          @media(max-width: 1366px) {
+          @media (max-width: 1366px) {
             font-size: 1rem;
           }
 
@@ -43,10 +42,7 @@
   }
 }
 
-
-
-@media(max-width:768px) and (min-width:700px) {
-
+@media (max-width: 768px) and (min-width: 700px) {
   .footer {
     flex-direction: column-reverse;
 
@@ -59,8 +55,6 @@
       padding-left: 1rem;
       font-weight: 500;
       line-height: 2rem;
-
-
     }
 
     &__nav {
@@ -83,12 +77,11 @@
   }
 }
 
-
-
-@media(max-width: 360px) {
-
+@media (max-width: 360px) {
+  #footer_index {
+    position: relative;
+  }
   .footer {
-
     flex-direction: column;
 
     &__copyright {
@@ -116,7 +109,6 @@
 
         & li {
           padding-bottom: 1rem;
-
 
           & a {
             font-size: 1rem;
