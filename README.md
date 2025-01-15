@@ -39,12 +39,13 @@ ___
 
 * [Liste d'assets graphique et système de design sur Figma](https://www.figma.com/proto/FqLShNuELRhRpJKklSh6tz/CO2WEB-2.0?page-id=1%3A2795&type=design&node-id=1-2796&viewport=1042%2C-165%2C0.17&scaling=scale-down&starting-point-node-id=1%3A2796)
 
-* [Dossier compressé de ressources type images](https://simplonline.co/classrooms/cd9c9cfe-5c16-432e-9761-c662ecb00454/briefs/28f1c4ea-10c7-4fca-8bf7-4e7c9c1e1c84) <br>
-Ces images sont stockées en local dans le dossier brief_co2web/img
+* Dossier ressources images stockées en local dans le dossier brief_co2web/img
 
 
 ___
 
 ## Auteurs:
-* [](https://github.com/Damien-Trouart)
-* []
+* [github.com/Damien-Trouart](https://github.com/Damien-Trouart)
+* [github.com/Hiromi-k57](https://github.com/Hiromi-k57)
+* [github.com/John-Do59](https://github.com/John-Do59)
+* [github.com/MaryamD96](https://github.com/MaryamD96)
