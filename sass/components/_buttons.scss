@@ -5,12 +5,13 @@
     $darkgreen
   ); /* Dégradé linéaire avec deux couleurs */
   color: $primary-color;
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
   border: none;
-  border-radius: 30px;
+  border-radius: 45px;
   cursor: pointer;
   font-family: "Montserrat";
   font-size: 18px;
+  font-weight: 600;
   transition: background 0.5s ease;
   box-shadow: 0 8px 6px rgba(0, 128, 0, 0.3); /* Ombre autour du bouton */
 
@@ -23,12 +24,13 @@
 .btn__savoir {
   background-color: $primary-color; /* Dégradé linéaire avec deux couleurs */
   color: $darkgreen;
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
   border: 2px solid $darkgreen;
-  border-radius: 30px;
+  border-radius: 45px;
   cursor: pointer;
   font-family: "Montserrat";
   font-size: 18px;
+  font-weight: 600;
 
   &:hover {
     background: $darkestgreen; /* Couleur de fond lors du survol */
