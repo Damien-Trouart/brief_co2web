@@ -66,9 +66,9 @@
       /* Image Feuille */
       .leaf-image {
         position: relative;
-        //z-index: 2;
+        z-index: 2;
         width: 50%;
-        right: 655px;
+        right: 650px;
         bottom: 40px;
         pointer-events: none;
       }
@@ -113,18 +113,18 @@
     /* Titre Principal */
 
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
     /* Paragraphe */
     .slide-description {
-      font-size: 1rem;
+      font-size: 1.5rem;
       line-height: 3;
     }
 
     /* Texte Surligné */
     .slide-highlight {
-      font-size: 1rem;
+      font-size: 1.5rem;
       line-height: 40px;
       position: relative;
       padding-top: 30px;
@@ -182,7 +182,7 @@
   .swiper-button-next {
     position: absolute;
     top: 70%;
-    transform: translateY(-50%);
+    transform: translateY(-250%);
     z-index: 10;
     cursor: pointer;
 
@@ -209,7 +209,7 @@
   }
 
   .swiper-button-next {
-    right: -100px;
+    right: -200px;
   }
 
   /* Contrôles de Slider */
@@ -243,8 +243,13 @@
 }
 /* ===== Media Queries ===== */
 @media (min-width: 3335px) {
+  /* Swiper Container */
+  .project-slider-first {
+    max-width: 1500px;
+    margin-top: 100px;
+  }
   .section__main {
-    padding-left: 6em;
+    padding-left: 2em;
   }
   .computer-image {
     max-width: 60%;
@@ -252,18 +257,27 @@
 }
 /* Desktop: 1920x1080 */
 @media screen and (min-width: 1920px) {
-  .computer-image {
-    max-width: 60%;
+  /* Swiper Container */
+  .project-slider-first {
+    max-width: 1500px;
+    margin-top: 100px;
   }
 }
 
 /* Notebook: 1366x768 */
 @media screen and (max-width: 1919px) and (min-width: 1366px) {
-  .computer-image {
-    max-width: 50%;
+  .project-slider-first {
+    max-width: 1300px;
+    margin-top: 100px;
+  }
+  .slide-content-computer .slide-image-container {
+    position: relative;
+    flex: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
-
 /* Tablet: 768x1024 */
 @media screen and (max-width: 1365px) and (min-width: 768px) {
   .slide-content {
