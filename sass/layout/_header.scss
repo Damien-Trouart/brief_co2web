@@ -16,8 +16,6 @@
   }
 
   &__nav {
-
-
     &__ul {
       display: flex;
       flex-direction: row;
@@ -38,22 +36,16 @@
         font-weight: 400;
       }
     }
-
   }
 }
 
-
-
-@media(min-width:769px) {
+@media (min-width: 769px) {
   .burger-menu-button {
     display: none;
   }
 }
 
-
-
-@media(max-width: 768px) {
-
+@media (max-width: 768px) {
   .header {
     padding: 0.5em 1.5rem;
     position: relative;
@@ -68,7 +60,6 @@
     }
 
     &__nav {
-
       &__ul {
         display: none;
         height: 0;
@@ -79,7 +70,7 @@
           display: block;
           position: absolute;
           right: 0;
-          bottom: -750px;
+          bottom: -745px;
           height: 730px;
           width: 360px;
           z-index: 4;
@@ -101,14 +92,11 @@
             }
           }
         }
-
       }
 
       .burger-menu-button {
         color: $darkestgreen;
       }
-
-
     }
   }
 }
