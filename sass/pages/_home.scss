@@ -12,8 +12,8 @@
   flex-direction: row;
 
   .img_home {
-    width: 45%;
-    height: 45%;
+    width: 40%;
+    height: 40%;
   }
 }
 
@@ -34,12 +34,12 @@
 
   .text__lorem {
     font-family: "Roboto";
-    font-size: 20px;
     color: black;
+    font-size: 20px;
     text-align: start;
     line-height: 2.5rem;
-    letter-spacing: 0.8em;
-    width: 70%;
+    letter-spacing: 0.08em;
+    width: 80%;
   }
 }
 
@@ -98,42 +98,41 @@
   }
 }
 
-@media (min-width: 1920px) and (max-width: 3334px) {
-  .container__main {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    .img_home {
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 50%;
-      height: auto;
-    }
+.container__main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .img_home {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 50%;
+    height: auto;
   }
-  .div__main__left {
-    margin-top: 8%;
-    h1 {
-      font-size: 3.5rem;
-    }
-    .text__lorem {
-      font-size: 30px;
-      line-height: 3rem;
-      letter-spacing: 0.1em;
-      width: 90%;
-    }
+}
+.div__main__left {
+  margin-top: 8%;
+  h1 {
+    font-size: 3.5rem;
   }
+  .text__lorem {
+    font-size: 30px;
+    line-height: 3rem;
+    letter-spacing: 0.1em;
+    width: 90%;
+  }
+}
 
-  .btn__position {
-    padding-top: 1.1rem;
-    p {
-      padding: 0 2rem;
-      font-size: 25px;
-    }
+.btn__position {
+  padding-top: 1.1rem;
+  p {
+    padding: 0 2rem;
+    font-size: 25px;
   }
-} /* @media (max-width: 1920px) --end */
+}
+/* @media (max-width: 1920px) --end */
 
-@media (min-width: 1366px) and (max-width: 1919px) {
+@media (min-width: 1366px) and (max-width: 1853px) {
   .container__main {
     width: 100%;
     position: relative;
@@ -143,7 +142,7 @@
       top: -80px;
       right: -80px;
       width: 50%;
-      height: auto;
+      height: 110%;
     }
   }
   .div__main__left {
@@ -157,9 +156,9 @@
     }
 
     .text__lorem {
-      font-size: 18px;
-      line-height: 1.8rem;
-      letter-spacing: 0.1em;
+      font-size: 19px;
+      line-height: 2rem;
+      letter-spacing: 0em;
       width: 80%;
     }
   }
