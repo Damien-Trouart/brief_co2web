@@ -244,19 +244,7 @@
   }
 }
 /* ===== Media Queries ===== */
-@media (min-width: 3335px) {
-  /* Swiper Container */
-  .project-slider-first {
-    max-width: 1500px;
-    margin-top: 100px;
-  }
-  .section__main {
-    padding-left: 2em;
-  }
-  .computer-image {
-    max-width: 60%;
-  }
-}
+
 /* Desktop: 1920x1080 */
 @media screen and (min-width: 1920px) {
   /* Swiper Container */
@@ -288,7 +276,7 @@
   }
 
   .computer-image {
-    max-width: 80%;
+    max-width: 50%;
   }
 
   .leaf-image {
@@ -302,12 +290,12 @@
 @media screen and (max-width: 767px) {
   .project-slider {
     //position: relative;
-    position: fixed;
-    //top: -100px;
+    // position: fixed;
+    top: 50px;
 
     /* Swiper Container */
     .swiper-container {
-      //max-width: 1500px;
+      max-width: 500px;
       margin: 20px;
       /* Swiper Wrapper */
       .swiper-wrapper {
@@ -326,110 +314,87 @@
     .slide-content {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      //gap: 20px;
     }
 
     /* Slide 1: Computer */
     .slide-content-computer {
       .slide-image-container {
-        //margin-top: 180px;
-        position: relative;
-        flex: 20;
+        margin-top: 80px;
+        // position: relative;
+        //flex: 1;
         //display: flex;
-        //justify-content: center;
-        // align-items: center;
+        justify-content: center;
+        align-items: center;
 
         /* Background Vert */
         .green-background {
-          position: absolute;
-          width: 50%;
-          height: 70px;
+          //position: absolute;
+          width: 100%;
+          height: 140px;
           background: linear-gradient(to right, $lightestgreen, $darkestgreen);
           border-top-right-radius: 500px;
           border-bottom-right-radius: 500px;
-          margin-right: 200%;
+          right: -20%;
         }
 
         /* Image Ordinateur */
         .computer-image {
-          position: relative;
+          //position: relative;
           z-index: 1;
           max-width: 50%;
           height: auto;
-          margin-top: 240px;
-          margin-right: 150px;
-          margin-left: 350px;
+          margin-top: 80px;
+          margin-right: 50px;
+          margin-left: 20px;
         }
 
         /* Image Feuille */
         .leaf-image {
-          position: relative;
+          //position: absolute;
           z-index: 2;
-          width: 50%;
-          right: 570px;
-          bottom: 40px;
+          width: 60%;
+          right: 5px;
+          bottom: 180px;
           pointer-events: none;
         }
       }
     }
 
-    /* Slide 2: Tree Background */
-    .slide-tree-background {
-      overflow: hidden;
-      z-index: -1;
-      background-image: url("/img/Groupe146.svg");
-      background-repeat: no-repeat;
-      position: fixed;
-      background-position: right;
-      background-size: contain;
-      width: 100%;
-      height: 1000px;
-      top: 60px;
-    }
-
     /* Slide Text */
     .slide-text {
-      flex: 10;
+      flex: 1;
       text-align: left;
-      //margin: auto;
-      position: relative;
-      margin-top: 150px;
+      //position: relative;
+      margin-top: -430px;
 
       /* Titre */
       .slide-title {
-        display: flex;
+        // display: flex;
         align-items: center;
-        margin-bottom: 20px;
-        /* Point Vert */
-        .title-dot {
-          width: 16px;
-          height: 16px;
-          background-color: $darkgreen;
-          border-radius: 50%;
-          margin-right: 10px;
-        }
+        margin-bottom: 230px;
       }
 
       /* Titre Principal */
 
       h2 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
       }
 
       /* Paragraphe */
       .slide-description {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        margin-bottom: 20px;
+        font-size: 1rem;
+
+        //margin-bottom: 20px;
       }
 
       /* Texte Surligné */
       .slide-highlight {
         font-size: 1.2rem;
-        line-height: 40px;
-        position: relative;
+        // line-height: 40px;
+        //position: relative;
         padding-top: 30px;
-        margin-top: 15px;
+        margin-top: -15px;
 
         &::before {
           content: "";
@@ -447,7 +412,7 @@
       flex: 10;
       margin-left: 300px;
       margin-bottom: 70px;
-      position: relative;
+      //position: relative;
       //margin-top: -50px; // Réduit l'espace en haut pour le rapprocher du haut
       transform: translateY(-70px); // Une autre option pour monter le texte
 
@@ -455,14 +420,6 @@
         display: flex;
         align-items: center;
         margin-bottom: 30px;
-
-        .titre-dot {
-          width: 16px;
-          height: 16px;
-          background-color: $darkgreen;
-          border-radius: 50%;
-          margin-right: 10px;
-        }
       }
 
       .titre {
@@ -470,50 +427,50 @@
       }
 
       .description {
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 2;
-        margin-left: 0; // Centrer le texte horizontalement
+        margin-right: -auto; // Centrer le texte horizontalement
         margin-bottom: 0; // Réduit l'espace en bas
       }
     }
 
     /* ========== Flèches de Navigation ========== */
     .swiper-button-next {
-      position: absolute;
-      top: 70%;
-      transform: translateY(-250%);
+      //position: absolute;
+      top: 38%;
+      //transform: translateY(-250%);
       z-index: 10;
       cursor: pointer;
 
       img {
-        width: 60px;
+        width: 30px;
         height: auto;
       }
     }
     .swiper-button-prev {
-      position: absolute;
-      top: 80%;
+      //position: absolute;
+      top: 38%;
       transform: translateY(-100%);
       z-index: 10;
       cursor: pointer;
 
       img {
-        width: 60px;
+        width: 30px;
         height: auto;
       }
     }
 
     .swiper-button-prev {
-      left: -200px;
+      left: 30px;
     }
 
     .swiper-button-next {
-      right: -200px;
+      right: 30px;
     }
 
     /* Contrôles de Slider */
     .slider-controls {
-      position: absolute;
+      //position: absolute;
       top: 50%;
       width: 100%;
 
