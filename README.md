@@ -1,6 +1,6 @@
-# brief_co2web
+# brief_co2web <img src="img/CO2-favicon.svg" width="30">
 
-## Instructions pour lancer le projet en local
+## Instructions pour lancer le projet en local <img src="img/instructions.png" style="vertical-align: middle" width="50"> :
 
 1.  ### Ouvrir le terminal:
 
@@ -31,7 +31,7 @@ ou
 
 
 ___
-## Sources
+## Sources       <img src="img/source.png" style="vertical-align: middle" width="50"> :
 
 * [Maquette visuelle du site version **desktop** sur Figma](https://www.figma.com/proto/FqLShNuELRhRpJKklSh6tz/CO2WEB-2.0?page-id=1%3A2221&type=design&node-id=1-2248&viewport=2123%2C410%2C0.36&scaling=scale-down&starting-point-node-id=1%3A2248)
 
@@ -44,7 +44,7 @@ ___
 
 ___
 
-## Auteurs:
+## Auteurs <img src="img/auteurs.png"  width="50"> :
 * [github.com/Damien-Trouart](https://github.com/Damien-Trouart)
 * [github.com/Hiromi-k57](https://github.com/Hiromi-k57)
 * [github.com/John-Do59](https://github.com/John-Do59)
