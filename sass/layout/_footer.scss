@@ -44,10 +44,13 @@
 
 
 
-@media(max-width:768px) {
+@media(max-width:768px) and (min-width:700px) {
 
   .footer {
+    flex-direction: column-reverse;
+
     &__copyright {
+      text-align: center;
       color: black;
       font-family: "Montserrat";
       font-size: 1rem;
@@ -65,7 +68,7 @@
       &__ul {
         padding: 0;
         margin: 0;
-        justify-content: end;
+        justify-content: center;
 
         & li {
           padding-bottom: 1rem;
@@ -84,9 +87,16 @@
 @media(max-width: 360px) {
 
   .footer {
+
     flex-direction: column;
 
     &__copyright {
+      color: black;
+      font-family: "Montserrat";
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      font-weight: 500;
       line-height: normal;
 
       .br {
@@ -96,11 +106,16 @@
     }
 
     &__nav {
+      padding-left: 1rem;
 
       &__ul {
+        padding: 0;
+        margin: 0;
         justify-content: flex-start;
 
         & li {
+          padding-bottom: 1rem;
+
 
           & a {
             font-size: 1rem;
