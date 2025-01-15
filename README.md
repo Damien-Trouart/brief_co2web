@@ -2,25 +2,25 @@
 
 ## Instructions pour lancer le projet en local <img src="img/instructions.png" style="vertical-align: middle" width="50"> :
 
-1.  ### Ouvrir le terminal:
+1.  #### <u>Ouvrir le terminal:</u>
 
 <img src="img/ctrl.png" width="50"> <img src="img/alt.png" width="50"> <img src="img/t.png" width="50"> 
 
 
-2.  ### Se déplacer dans le dossier souhaité avec la commande cd:
+2.  #### <u>Se déplacer dans le dossier souhaité avec la commande cd:</u>
 ```bash
 cd /Documents/Dossiersouhaité
 ```
-3. ### Cloner le repo distant (github) en local:
+3. #### <u>Cloner le repo distant (github) en local:</u>
 ```bash
 git clone https://github.com/Damien-Trouart/brief_co2web.git
 ```
-4. ### Se déplacer dans le nouveau dossier cloné:
+4. #### <u>Se déplacer dans le nouveau dossier cloné:</u>
 ```bash
 cd brief_co2web
 ```
 
-5. ### Ouvrir le site dans un navigateur:
+5. #### <u>Ouvrir le site dans un navigateur:</u>
 ```
 * Double cliquer sur index.html 
 
@@ -31,7 +31,7 @@ ou
 
 
 ___
-## Sources       <img src="img/source.png" style="vertical-align: middle" width="50"> :
+## Sources <img src="img/source.png" style="vertical-align: middle" width="50"> :
 
 * [Maquette visuelle du site version **desktop** sur Figma](https://www.figma.com/proto/FqLShNuELRhRpJKklSh6tz/CO2WEB-2.0?page-id=1%3A2221&type=design&node-id=1-2248&viewport=2123%2C410%2C0.36&scaling=scale-down&starting-point-node-id=1%3A2248)
 
@@ -43,7 +43,6 @@ ___
 
 
 ___
-
 ## Auteurs <img src="img/auteurs.png"  width="50"> :
 * [github.com/Damien-Trouart](https://github.com/Damien-Trouart)
 * [github.com/Hiromi-k57](https://github.com/Hiromi-k57)
