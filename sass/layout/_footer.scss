@@ -1,6 +1,7 @@
 #footer-about {
   background-color: transparent;
 }
+
 .footer {
   display: flex;
   justify-content: end; //avoir la liste de liens à droite
@@ -22,7 +23,8 @@
       font-family: "Roboto";
       list-style-type: none;
       display: flex;
-      flex-flow: row wrap; // avoir la liste de liens horizontalement qui déroulent pour version mobile
+      justify-content: start;
+      flex-wrap: wrap; // avoir la liste de liens horizontalement qui déroulent pour version mobile
 
       & li {
         padding-right: 2rem; //permettre un espace entre chaque lien
@@ -68,8 +70,11 @@
         margin: 0;
         justify-content: center;
 
+
         & li {
           padding-bottom: 1rem;
+          padding-right: 1rem; //permettre un espace entre chaque lien
+
 
           & a {
             font-size: 1.2rem;
@@ -81,12 +86,15 @@
 }
 
 @media (max-width: 360px) {
+
   #footer_index {
     position: relative;
   }
+
   #footer-about {
     background-color: $primary-color;
   }
+
   .footer {
     flex-direction: column;
 
@@ -94,7 +102,7 @@
       color: black;
       font-family: "Montserrat";
       font-size: 1rem;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       padding-left: 1rem;
       font-weight: 500;
       line-height: normal;
@@ -107,6 +115,8 @@
 
     &__nav {
       padding-left: 1rem;
+      padding-top: 0;
+      margin: 0;
 
       &__ul {
         padding: 0;
