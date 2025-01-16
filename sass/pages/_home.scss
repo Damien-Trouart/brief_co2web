@@ -4,6 +4,7 @@
 
 .section__main {
   padding-left: 3em;
+  position: relative;
 }
 
 .container__main {
@@ -19,8 +20,8 @@
   .img_home {
     position: absolute;
     margin-top: 0;
-    top: -110px;
-    right: -100px;
+    top: -100px;
+    right: -90px;
     width: 45%;
     height: auto;
   }
@@ -29,7 +30,7 @@
 .div__main__left {
   width: 50%;
   margin-top: 5%;
-  padding-left: 2%;
+  padding-left: 1%;
   display: flex;
   flex-direction: column;
 
@@ -117,7 +118,6 @@
     position: relative;
     overflow: hidden;
     .img_home {
-      position: absolute;
       top: -80px;
       right: -80px;
       width: 50%;
@@ -215,6 +215,7 @@
     width: 100%;
     flex-direction: column;
     overflow: visible;
+    padding-bottom: 1rem;
 
     .img_home {
       order: 1;
