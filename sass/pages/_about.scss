@@ -410,7 +410,7 @@
     /* Slide Text2 */
     .slide-texte {
       flex: 10;
-      margin-left: 300px;
+      //margin-left: 300px;
       margin-bottom: 70px;
       //position: relative;
       //margin-top: -50px; // Réduit l'espace en haut pour le rapprocher du haut
@@ -432,6 +432,18 @@
         margin-right: -auto; // Centrer le texte horizontalement
         margin-bottom: 0; // Réduit l'espace en bas
       }
+    }
+    /* Slide 2: Tree Background */
+    .slide-tree-background {
+      overflow: hidden;
+      z-index: -1;
+      background-image: url("/img/Groupe146.svg");
+      background-repeat: no-repeat;
+      //position: fixed;
+      background-position: top;
+      background-size: contain;
+      width: 100%;
+      top: 100px;
     }
 
     /* ========== Flèches de Navigation ========== */
