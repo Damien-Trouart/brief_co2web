@@ -5,7 +5,7 @@
 
 .project-slider {
   position: relative;
-  position: fixed;
+  //position: fixed;
   top: -100px;
 
   /* Swiper Container */
@@ -261,7 +261,8 @@
     margin-top: 100px;
   }
   .slide-content-computer .slide-image-container {
-    position: relative;
+    //position: relative;
+    position: fixed;
     flex: 20;
     display: flex;
     justify-content: center;
@@ -289,47 +290,28 @@
 /* ===== Mobile: 360x800 ===== */
 @media screen and (max-width: 767px) {
   .project-slider {
-    //position: relative;
-    // position: fixed;
-    top: 50px;
+    top: 60px;
 
     /* Swiper Container */
     .swiper-container {
       max-width: 500px;
       margin: 20px;
-      /* Swiper Wrapper */
-      .swiper-wrapper {
-        display: flex;
-      }
-
-      /* Swiper Slide */
-      .swiper-slide {
-        display: flex;
-        align-items: center;
-        padding: 0;
-      }
     }
 
     /* Slide Content */
     .slide-content {
-      display: flex;
       flex-direction: column;
-      //gap: 20px;
     }
 
     /* Slide 1: Computer */
     .slide-content-computer {
       .slide-image-container {
         margin-top: 80px;
-        // position: relative;
-        //flex: 1;
-        //display: flex;
         justify-content: center;
         align-items: center;
 
         /* Background Vert */
         .green-background {
-          //position: absolute;
           width: 100%;
           height: 140px;
           background: linear-gradient(to right, $lightestgreen, $darkestgreen);
@@ -340,7 +322,6 @@
 
         /* Image Ordinateur */
         .computer-image {
-          //position: relative;
           z-index: 1;
           max-width: 50%;
           height: auto;
@@ -351,7 +332,6 @@
 
         /* Image Feuille */
         .leaf-image {
-          //position: absolute;
           z-index: 2;
           width: 60%;
           right: 5px;
@@ -363,15 +343,12 @@
 
     /* Slide Text */
     .slide-text {
-      flex: 1;
+      flex-direction: column;
       text-align: left;
-      //position: relative;
       margin-top: -430px;
 
       /* Titre */
       .slide-title {
-        // display: flex;
-        align-items: center;
         margin-bottom: 230px;
       }
 
@@ -384,15 +361,11 @@
       /* Paragraphe */
       .slide-description {
         font-size: 1rem;
-
-        //margin-bottom: 20px;
       }
 
       /* Texte Surligné */
       .slide-highlight {
         font-size: 1.2rem;
-        // line-height: 40px;
-        //position: relative;
         padding-top: 30px;
         margin-top: -15px;
 
@@ -409,28 +382,33 @@
     }
     /* Slide Text2 */
     .slide-texte {
-      flex: 10;
-      //margin-left: 300px;
+      //flex-direction: column;
+      //flex: 10;
+      margin-left: -50px;
       margin-bottom: 70px;
       //position: relative;
       //margin-top: -50px; // Réduit l'espace en haut pour le rapprocher du haut
-      transform: translateY(-70px); // Une autre option pour monter le texte
+      transform: translate(
+        35px,
+        -60px
+      ); // Une autre option pour monter le texte
 
       .slide-titre {
-        display: flex;
+        //display: flex;
         align-items: center;
-        margin-bottom: 30px;
+        //margin-bottom: 30px;
       }
 
       .titre {
-        font-size: 2.5rem; // Ajuste la taille si nécessaire
+        font-size: 1.5rem; // Ajuste la taille si nécessaire
       }
 
       .description {
+        text-align: justify;
         font-size: 1rem;
-        line-height: 2;
-        margin-right: -auto; // Centrer le texte horizontalement
-        margin-bottom: 0; // Réduit l'espace en bas
+        //line-height: 2;
+        //margin-right: auto; // Centrer le texte horizontalement
+        //margin-bottom: 0; // Réduit l'espace en bas
       }
     }
     /* Slide 2: Tree Background */
@@ -440,18 +418,20 @@
       background-image: url("/img/Groupe146.svg");
       background-repeat: no-repeat;
       //position: fixed;
+      //margin-left: 100px;
       background-position: top;
       background-size: contain;
-      width: 100%;
-      top: 100px;
+      //width: 60%;
+      //top: 150px;
     }
 
     /* ========== Flèches de Navigation ========== */
     .swiper-button-next {
-      //position: absolute;
+      //position: relative;
       top: 38%;
+      margin-left: -100px;
       //transform: translateY(-250%);
-      z-index: 10;
+      //z-index: 10;
       cursor: pointer;
 
       img {
@@ -462,8 +442,9 @@
     .swiper-button-prev {
       //position: absolute;
       top: 38%;
-      transform: translateY(-100%);
-      z-index: 10;
+      transform: translateY(-750%);
+      margin-left: -20px;
+      //z-index: 10;
       cursor: pointer;
 
       img {
