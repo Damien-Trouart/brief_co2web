@@ -107,6 +107,8 @@
 
 @media (max-width: 360px) {
   .header {
+    border-bottom: none;
+
     &__nav {
       &__ul {
         height: 0;
