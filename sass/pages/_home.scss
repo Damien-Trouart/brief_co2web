@@ -75,10 +75,10 @@
     position: relative;
     overflow: hidden;
     .img_home {
-      position: absolute; // 親要素を基準に配置
-      top: -180px; // 画像の上端を少しずらす
-      right: -180px; // 画像の右端を少しずらす
-      width: 50%; // 700px画像サイズ（デザインに合わせて調整）
+      position: absolute;
+      top: -180px;
+      right: -180px;
+      width: 50%;
       height: auto;
     }
   }
