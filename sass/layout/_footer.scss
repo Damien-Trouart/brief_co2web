@@ -87,6 +87,10 @@
 
 @media (max-width: 360px) {
 
+  #footer_contact {
+    position: relative;
+  }
+
   #footer_index {
     position: relative;
   }
@@ -106,6 +110,7 @@
       padding-left: 1rem;
       font-weight: 500;
       line-height: normal;
+      text-align: start;
 
       .br {
         display: block;

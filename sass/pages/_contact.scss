@@ -15,7 +15,6 @@
 
     .container {
         font-family: "Montserrat";
-
         background: $primary-color;
         padding: 50px 100px;
         border-radius: 30px;
@@ -290,6 +289,12 @@
                 padding: 20px;
                 margin: 2rem 0rem;
 
+                .form-group {
+                    .form-column {
+                        width: 95%;
+                    }
+                }
+
                 .submit-btn-container {
                     margin: 1rem;
                     align-items: center;
@@ -313,46 +318,42 @@
         display: none;
     }
 
-    #footer_contact {
-        position: relative;
-    }
+
 }
 
+
+
+
+
+
+
 @media (max-width: 360px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
 
-    .header__nav {
-        display: none;
-    }
 
-    /*   .header__burger {
-            display: block;
-        }
-*/
-    .header__nav.active {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        z-index: 1000;
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    .contact-page {
 
-            li {
-                margin: 10px 0;
+        main {
+
+
+            .container {
+                padding: 10px;
+                margin: 2rem;
+
+                .form-group {
+                    .form-column {
+                        width: 88%;
+                    }
+                }
+            }
+
+            .image {
+                display: none;
+            }
+
+            .bottom-border::after {
+                content: '';
             }
         }
-    }
-
-    .image {
-        display: none !important;
     }
 }
