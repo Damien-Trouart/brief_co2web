@@ -239,6 +239,7 @@
         .container {
             width: 80%;
             padding: 40px;
+            margin: 0 auto; /* Centre le conteneur horizontalement */
         }
 
         .image {
@@ -250,6 +251,7 @@
         .container {
             width: 90%;
             padding: 20px;
+            margin: 0 auto; /* Centre le conteneur horizontalement */
         }
 
         .form-group {
@@ -299,6 +301,7 @@
         .container {
             width: 100%;
             padding: 10px;
+            margin: 0 auto; /* Centre le conteneur horizontalement */
         }
 
         .header__nav {
@@ -333,15 +336,4 @@
             display: none !important;
         }
     }
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8f8f8;
-    padding: 20px;
-    text-align: center;
-    z-index: 1001; /* Ensure the footer is above the content */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
