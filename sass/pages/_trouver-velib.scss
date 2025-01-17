@@ -1,6 +1,3 @@
-$primary-color: #ffffff;
-$darkestgreen: #006400;
-
 .coming {
   font-size: 3em;
   color: black;
@@ -75,5 +72,61 @@ $darkestgreen: #006400;
 @media (max-width: 768px) {
   .countdown-section {
     height: 60vh;
+
+
+
+
+
+    .coming {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.5rem;
+      padding: 0 4rem;
+
+    }
+  }
+}
+
+
+
+
+
+@media (max-width: 360px) {
+
+
+  .countdown-section {
+
+
+    .countdown-container {
+
+      #days {
+        width: 2.5rem;
+      }
+
+      #seconds,
+      #minutes {
+        width: 2rem;
+      }
+
+
+      .countdown-item {
+        width: 1.5rem;
+
+      }
+    }
+
+    .coming {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.5rem;
+      padding: 0 4rem;
+
+    }
   }
 }
