@@ -48,6 +48,11 @@
 }
 
 @media (max-width: 768px) and (min-width: 700px) {
+
+  #footer_contact {
+    position: relative;
+  }
+
   .footer {
     flex-direction: column-reverse;
 
