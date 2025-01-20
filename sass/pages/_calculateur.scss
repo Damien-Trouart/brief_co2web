@@ -264,7 +264,7 @@
         }
 
         .image {
-            display: none !important;
+            display: none;
         }
     }
 
@@ -342,9 +342,10 @@
         }
 
 
-    }
 
-    .image {
-        display: none;
+
+        .image {
+            display: none;
+        }
     }
 }
