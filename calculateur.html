@@ -43,8 +43,9 @@
 
   <main class="main-calculator">
     <div class="title-container">
-      <h1>Calculateur d'émissions de CO2</h1>
-      <h2>Trajets domicile / travail en voiture</h2>
+      <h1 class="calculator_title_phone">Calculez vos <br>émissions</h1>
+      <h1 class="calculator_title_desktop">Calculateur d'émissions de CO2</h1>
+      <h2 class="calculator_title_desktop">Trajets domicile / travail en voiture</h2>
     </div>
     <div class="container">
       <!-- Formulaire à l'intérieur du conteneur -->
@@ -59,7 +60,8 @@
           <input type="number" id="days" name="days" required class="bottom-border"
             placeholder="Entrez le nombre de jours" />
         </div>
-        <button type="button" id="calculate-btn">Commencer</button>
+        <button type="button" id="calculate-btn"><span class="calculate_btn_desktop">Commencer</span> <span
+            class="calculate_btn_phone">Calculer maintenant</span></button>
         <div>
           <p>
             En utilisant cette calculatrice d'émission de carbone, vous
@@ -89,7 +91,8 @@
         <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>

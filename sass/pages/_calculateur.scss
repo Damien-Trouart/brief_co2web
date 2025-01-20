@@ -6,6 +6,10 @@
         text-align: center;
         margin-top: 120px;
 
+        .calculator_title_phone {
+            display: none;
+        }
+
         h1,
         h2 {
             color: black;
@@ -19,7 +23,7 @@
         background-color: $primary-color;
         padding: 20px;
         border-radius: 30px;
-        box-shadow: 0 0 10px rgba(132, 133, 132, 0.9);
+        box-shadow: 0 0 8px rgba(132, 133, 132, 0.9);
         width: 900px;
         height: 400px;
         text-align: center;
@@ -68,6 +72,10 @@
             transition: background 0.5s ease;
             box-shadow: 0 4px 6px rgba(0, 128, 0, 0.5);
             margin-top: 40px;
+
+            .calculate_btn_phone {
+                display: none;
+            }
 
             &:hover {
                 background: $darkestgreen;
@@ -261,15 +269,82 @@
     }
 
     @media (max-width: 360px) {
-        .container {
-            width: 100%;
-            padding: 10px;
-            margin: 0 auto;
-            /* Centre le conteneur horizontalement */
+
+        .main-calculator {
+            margin-top: 0rem;
         }
 
-        .image {
-            display: none;
+        .title-container {
+
+            .calculator_title_phone {
+                display: block;
+                text-align: left;
+                padding-left: 2rem;
+                font-size: 2rem;
+
+            }
+
+            .calculator_title_desktop {
+                display: none;
+            }
         }
+
+        .container {
+            width: 20rem;
+            padding: 10px;
+            margin: 0;
+            height: 100%;
+            margin-bottom: 3rem;
+            /* Centre le conteneur horizontalement */
+
+
+
+            .form-group {
+
+                label {
+                    margin-left: 2rem;
+                    margin-bottom: 0;
+                }
+
+                input {
+                    margin-left: 2rem;
+
+                }
+            }
+
+            #calculate-btn {
+                margin: 0;
+
+                padding: 1rem 2rem;
+
+                .calculate_btn_phone {
+                    display: inline;
+                    font-size: 22px;
+                    font-weight: 500;
+                }
+
+                .calculate_btn_desktop {
+                    display: none;
+                }
+            }
+
+            .result {
+                margin-top: 20px;
+                color: black;
+                font-size: 18px;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            p {
+                margin: 1rem;
+                font-size: 0.65rem;
+            }
+        }
+
+
+    }
+
+    .image {
+        display: none;
     }
 }
