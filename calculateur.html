@@ -1,110 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculateur d'émissions de CO2</title>
-    <link rel="stylesheet" href="sass/main.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body class="calculator-page">
-    <!-- Images positionnées en dehors du formulaire -->
-    <div class="image top-left"></div>
-    <div class="image bottom-left"></div>
-    <div class="image bottom-right"></div>
-    <div class="image top-right"></div>
-    <div class="image top-right22"></div>
-    <div class="image top-right33"></div>
-    <header class="header">
-      <div class="header__logo">
-        <img src="/img/CO2-logo.svg" alt="CO2-logo" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculateur d'émissions de CO2</title>
+  <link rel="stylesheet" href="sass/main.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="calculator-page">
+  <!-- Images positionnées en dehors du formulaire -->
+  <div class="image top-left"></div>
+  <div class="image bottom-left"></div>
+  <div class="image bottom-right"></div>
+  <div class="image top-right"></div>
+  <div class="image top-right22"></div>
+  <div class="image top-right33"></div>
+  <header class="header">
+    <div class="header__logo">
+      <img src="/img/CO2-logo.svg" alt="CO2-logo" />
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav__ul">
+        <li><a href="/index.html">Accueil</a></li>
+        <li><a href="/mode-demploi.html">Mode d'emploi</a></li>
+        <li><a href="/trouver-velib.html">Trouver un velib</a></li>
+        <li class="activated"><a href="/calculateur.html">Calculateur</a></li>
+        <li><a href="/about.html">A propos</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="burger-menu-button">
+        <i class="fa-solid fa-bars"></i>
       </div>
-      <nav class="header__nav">
-        <ul class="header__nav__ul">
-          <li><a href="/index.html">Accueil</a></li>
-          <li><a href="/mode-demploi.html">Mode d'emploi</a></li>
-          <li><a href="/trouver-velib.html">Trouver un velib</a></li>
-          <li class="activated"><a href="/calculateur.html">Calculateur</a></li>
-          <li><a href="/about.html">A propos</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-        <div class="burger-menu-button">
-          <i class="fa-solid fa-bars"></i>
+    </nav>
+  </header>
+
+  <main class="main-calculator">
+    <div class="title-container">
+      <h1>Calculateur d'émissions de CO2</h1>
+      <h2>Trajets domicile / travail en voiture</h2>
+    </div>
+    <div class="container">
+      <!-- Formulaire à l'intérieur du conteneur -->
+      <form id="co2-calculator">
+        <div class="form-group">
+          <label for="distance">Distance parcourue par jour (en kilomètres):</label>
+          <input type="number" id="distance" name="distance" required class="bottom-border"
+            placeholder="Entrez la distance" />
         </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="title-container">
-        <h1>Calculateur d'émissions de CO2</h1>
-        <h2>Trajets domicile / travail en voiture</h2>
-      </div>
-      <div class="container">
-        <!-- Formulaire à l'intérieur du conteneur -->
-        <form id="co2-calculator">
-          <div class="form-group">
-            <label for="distance"
-              >Distance parcourue par jour (en kilomètres):</label
-            >
-            <input
-              type="number"
-              id="distance"
-              name="distance"
-              required
-              class="bottom-border"
-              placeholder="Entrez la distance"
-            />
-          </div>
-          <div class="form-group">
-            <label for="days">Nombre de jours travaillés par semaine:</label>
-            <input
-              type="number"
-              id="days"
-              name="days"
-              required
-              class="bottom-border"
-              placeholder="Entrez le nombre de jours"
-            />
-          </div>
-          <button type="button" id="calculate-btn">Commencer</button>
-          <div>
-            <p>
-              En utilisant cette calculatrice d'émission de carbone, vous
-              acceptez que les informations soient inscrites et<br />stockées
-              dans notre base de données publiques
-            </p>
-          </div>
-        </form>
-
-        <!-- Popup pour afficher le résultat -->
-        <div id="popup" class="popup">
-          <textarea id="result" class="popup-textarea" readonly></textarea>
-          <button id="close-popup" class="close-popup">Fermer</button>
+        <div class="form-group">
+          <label for="days">Nombre de jours travaillés par semaine:</label>
+          <input type="number" id="days" name="days" required class="bottom-border"
+            placeholder="Entrez le nombre de jours" />
         </div>
-      </div>
-    </main>
+        <button type="button" id="calculate-btn">Commencer</button>
+        <div>
+          <p>
+            En utilisant cette calculatrice d'émission de carbone, vous
+            acceptez que les informations soient inscrites et<br />stockées
+            dans notre base de données publiques
+          </p>
+        </div>
+      </form>
 
-    <footer class="footer" id="footer_calculator"></footer>
-      <p class="footer__copyright">Copyright © 2022 CO2WEB.<span class="br"></span> All rights reserved.</p>
-      <nav class="footer__nav">
-        <ul class="footer__nav__ul">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/mode-demploi.html">Mode d'emploi</a></li>
-            <li><a href="/trouver-velib.html">Trouver un velib</a></li>
-            <li><a href="/calculateur.html">Calculateur</a></li>
-            <li><a href="/about.html">A propos</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-        </ul>
+      <!-- Popup pour afficher le résultat -->
+      <div id="popup" class="popup">
+        <textarea id="result" class="popup-textarea" readonly></textarea>
+        <button id="close-popup" class="close-popup">Fermer</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="footer_calculator">
+    <p class="footer__copyright">Copyright © 2022 CO2WEB.<span class="br"></span> All rights reserved.</p>
+    <nav class="footer__nav">
+      <ul class="footer__nav__ul">
+        <li><a href="/index.html">Accueil</a></li>
+        <li><a href="/mode-demploi.html">Mode d'emploi</a></li>
+        <li><a href="/trouver-velib.html">Trouver un velib</a></li>
+        <li><a href="/calculateur.html">Calculateur</a></li>
+        <li><a href="/about.html">A propos</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
     </nav>
     </footer>
     <script src="script.js"></script>
