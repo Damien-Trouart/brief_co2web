@@ -167,7 +167,7 @@
     .bottom-border {
         border: none;
         border-bottom: 2px solid #ccc;
-        color: grayscale(50%);
+        color: $border-color;
     }
 
     .bottom-border::after {
