@@ -95,7 +95,7 @@
         z-index: 0;
 
         &.top-left {
-            top: 5rem;
+            top: 10rem;
             left: 14rem;
             background-image: url('../../img/Groupe27.svg');
             background-size: contain;
@@ -105,17 +105,17 @@
         }
 
         &.bottom-left {
-            bottom: 20rem;
-            left: 12rem;
+            bottom: 10rem;
+            left: 15rem;
             background-image: url('../../img/TracÔÇÜ76.svg');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 25rem;
-            height: 25rem;
+            width: 22rem;
+            height: 22rem;
         }
 
         &.bottom-right {
-            bottom: 21rem;
+            bottom: 10rem;
             right: 18rem;
             background-image: url('../../img/TracÔÇÜ69.svg');
             background-size: contain;
@@ -136,8 +136,8 @@
         }
 
         &.top-right22 {
-            top: 6rem;
-            right: 15rem;
+            top: 10rem;
+            right: 18rem;
             background-image: url('../../img/Ellipse\ 62.svg');
             background-size: contain;
             background-repeat: no-repeat;
@@ -146,8 +146,8 @@
         }
 
         &.top-right33 {
-            top: 16rem;
-            right: 16rem;
+            top: 19rem;
+            right: 18rem;
             background-image: url('../../img/Ellipse\ 63.svg');
             background-size: contain;
             background-repeat: no-repeat;
@@ -221,6 +221,10 @@
     }
 
     @media (max-width: 1366px) {
+        .title-container {
+            margin: 1rem 0rem;
+        }
+
         .container {
             width: 80%;
             padding: 40px;
