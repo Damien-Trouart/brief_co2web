@@ -12,7 +12,9 @@ $breakpoints: (
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @warn "Breakpoint '#{$breakpoint}' n'existe pas dans $breakpoints.";
   }
 }
@@ -39,7 +41,7 @@ $breakpoints: (
   padding: 20px;
   box-sizing: border-box;
 
-  @include responsive("tablet") {
+  @include responsive("notebook") {
     flex-direction: row;
     padding: 0;
   }
@@ -112,66 +114,82 @@ $breakpoints: (
 
 /* Illustration */
 .illustration {
-  flex: 1;
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: visible;
+  .pc-svg {
+    width: 20rem;
 
-  @include responsive("tablet") {
-    height: 100%;
-  }
-
-  .green-background {
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    background: linear-gradient(to right, $lightestgreen, $darkestgreen);
-    border-top-right-radius: 250px;
-    border-bottom-right-radius: 250px;
-    top: 0;
-    z-index: -1;
-    left: -20%;
 
     @include responsive("tablet") {
-      width: 100%;
-      height: 40%;
-      top: 250px;
-      border-top-right-radius: 500px;
-      border-bottom-right-radius: 500px;
+      width: 30rem;
     }
+
 
     @include responsive("desktop") {
-      width: 100%;
-      left: -35%;
-    }
-  }
-
-  img {
-    position: relative;
-    z-index: 2;
-    max-width: 50%;
-    height: 70%;
-    margin-top: 50px;
-
-    @include responsive("tablet") {
-      max-width: 100%;
-      margin-top: 150px;
-      margin-left: 30%;
-    }
-
-    @include responsive("desktop") {
-      max-width: 40%;
+      width: 55rem;
+      margin-top: 6rem;
     }
   }
 }
 
+// flex: 1;
+// position: relative;
+// width: 100%;
+// height: 300px;
+// overflow: visible;
+
+// @include responsive("tablet") {
+//   height: 100%;
+// }
+
+// .green-background {
+//   position: absolute;
+//   width: 120%;
+//   height: 100%;
+//   background: linear-gradient(to right, $lightestgreen, $darkestgreen);
+//   border-top-right-radius: 250px;
+//   border-bottom-right-radius: 250px;
+//   top: 0;
+//   z-index: -1;
+//   left: -20%;
+
+//   @include responsive("tablet") {
+//     width: 100%;
+//     height: 40%;
+//     top: 250px;
+//     border-top-right-radius: 500px;
+//     border-bottom-right-radius: 500px;
+//   }
+
+//   @include responsive("desktop") {
+//     width: 100%;
+//     left: -35%;
+//   }
+// }
+
+// img {
+//   position: relative;
+//   z-index: 2;
+//   max-width: 50%;
+//   height: 70%;
+//   margin-top: 50px;
+
+//   @include responsive("tablet") {
+//     max-width: 100%;
+//     margin-top: 150px;
+//     margin-left: 30%;
+//   }
+
+//   @include responsive("desktop") {
+//     max-width: 40%;
+//   }
+// }
+
+
 .leaves {
   position: absolute;
   bottom: 20px;
-  left: 100px;
+  left: 20px;
   z-index: 3;
-  width: 50%;
+  width: 30%;
 
   @include responsive("tablet") {
     bottom: 20px;
@@ -180,7 +198,8 @@ $breakpoints: (
 
   @include responsive("desktop") {
     bottom: 40px;
-    right: 50px;
+    left: 0;
+    width: 1500px;
   }
 
   .leaf {
@@ -218,12 +237,14 @@ $breakpoints: (
     }
   }
 
-  &.left {
+  &--left {
     left: 10px;
   }
 
-  &.right {
+  &--right {
     right: 10px;
+
+
   }
 }
 
@@ -240,17 +261,19 @@ $breakpoints: (
   .illustration {
     order: 1;
   }
+
   .content {
     order: 2;
   }
 
-  @include responsive("tablet") {
+  @include responsive("notebook") {
     flex-direction: row;
   }
 
   #nextSlide {
     display: block;
     right: 10px;
+
   }
 }
 
@@ -258,16 +281,19 @@ $breakpoints: (
   .illustration {
     order: 1;
   }
+
   .content {
     order: 2;
+
   }
 
-  @include responsive("tablet") {
+  @include responsive("notebook") {
     flex-direction: row-reverse;
 
     .illustration {
       order: 2;
     }
+
     .content {
       order: 1;
     }
@@ -305,4 +331,9 @@ $breakpoints: (
     height: 2%;
     size: 80% auto;
   }
+}
+
+
+.main-about {
+  margin-top: 0;
 }

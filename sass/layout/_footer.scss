@@ -1,7 +1,3 @@
-#footer-about {
-  background-color: transparent;
-}
-
 .footer {
   display: flex;
   justify-content: end; //avoir la liste de liens à droite
@@ -88,20 +84,12 @@
 }
 
 @media (max-width: 360px) {
-  #footer_calculator {
-    position: relative;
-  }
 
-  #footer_contact {
-    position: relative;
-  }
-
-  #footer_index {
-    position: relative;
-  }
-
+  #footer_calculator,
+  #footer_contact,
+  #footer_index,
   #footer-about {
-    background-color: transparent;
+    position: relative;
   }
 
   .footer {
