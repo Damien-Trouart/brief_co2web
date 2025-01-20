@@ -1,7 +1,7 @@
 // Attendre que le DOM soit entièrement chargé avant d'ajouter l'événement
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Ajout du gestionnaire d'événements pour le clic sur le bouton
-  document.getElementById('calculate-btn').addEventListener('click', function() {
+  document.getElementById('calculate-btn').addEventListener('click', function () {
     // Récupérer les valeurs des champs du formulaire
     const distance = parseFloat(document.getElementById('distance').value);
     const days = parseInt(document.getElementById('days').value);
@@ -28,23 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Fermeture de la popup
-  document.getElementById('close-popup').addEventListener('click', function() {
+  document.getElementById('close-popup').addEventListener('click', function () {
     document.getElementById('popup').style.display = 'none'; // Masquer la popup
   });
-
-  // Ajout du gestionnaire d'événements pour le menu burger
- /* const burgerIcon = document.querySelector('.header__burger');
-  const nav = document.querySelector('.header__nav');
-*/
- /* burgerIcon.addEventListener('click', function() {
-    nav.classList.toggle('active');
-  });
-*/
-  // Ajouter un gestionnaire d'événements pour fermer le menu burger lorsque l'utilisateur clique en dehors de celui-ci
- /* window.addEventListener('click', function(event) {
-    if (event.target.closest('.header__nav') === null && event.target.closest('.header__burger') === null) {
-      nav.classList.remove('active');
-    }
-  });*/
-}); 
+});
 
