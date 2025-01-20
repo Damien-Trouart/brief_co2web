@@ -1,493 +1,307 @@
-/* ========== Section: Project Slider ========== */
-.body_about {
+// Variables pour les breakpoints
+$breakpoints: (
+  "mobile": 360px,
+  "tablet": 768px,
+  "notebook": 1366px,
+  "desktop": 1920px,
+);
+
+// Mixin pour le responsive design
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' n'existe pas dans $breakpoints.";
+  }
+}
+
+/* ========== Section: Slider ========== */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   overflow: hidden;
 }
 
-.project-slider {
-  position: relative;
-  //position: fixed;
-  top: -100px;
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
 
-  /* Swiper Container */
-  .swiper-container {
-    max-width: 1500px;
-    margin: 20px;
-    /* Swiper Wrapper */
-    .swiper-wrapper {
-      display: flex;
-    }
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 
-    /* Swiper Slide */
-    .swiper-slide {
-      display: flex;
-      align-items: center;
-      padding: 0;
-    }
-  }
-
-  /* Slide Content */
-  .slide-content {
-    display: flex;
+  @include responsive("tablet") {
     flex-direction: row;
-    gap: 20px;
-  }
-
-  /* Slide 1: Computer */
-  .slide-content-computer {
-    .slide-image-container {
-      margin-top: 180px;
-      position: relative;
-      flex: 20;
-      //display: flex;
-      //justify-content: center;
-      // align-items: center;
-
-      /* Background Vert */
-      .green-background {
-        position: absolute;
-        width: 100%;
-        height: 300px;
-        background: linear-gradient(to right, $lightestgreen, $darkestgreen);
-        border-top-right-radius: 500px;
-        border-bottom-right-radius: 500px;
-        margin-right: 50%;
-      }
-
-      /* Image Ordinateur */
-      .computer-image {
-        position: relative;
-        z-index: 1;
-        max-width: 50%;
-        height: auto;
-        margin-top: 240px;
-        margin-right: 150px;
-        margin-left: 350px;
-      }
-
-      /* Image Feuille */
-      .leaf-image {
-        position: relative;
-        z-index: 2;
-        width: 50%;
-        right: 570px;
-        bottom: 40px;
-        pointer-events: none;
-      }
-    }
-  }
-
-  /* Slide 2: Tree Background */
-  .slide-tree-background {
-    overflow: hidden;
-    z-index: -1;
-    background-image: url("/img/Groupe146.svg");
-    background-repeat: no-repeat;
-    position: fixed;
-    background-position: right;
-    background-size: contain;
-    width: 100%;
-    height: 1000px;
-    top: 60px;
-  }
-
-  /* Slide Text */
-  .slide-text {
-    flex: 10;
-    text-align: left;
-    //margin: auto;
-    position: relative;
-    margin-top: 150px;
-
-    /* Titre */
-    .slide-title {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      /* Point Vert */
-      .title-dot {
-        width: 16px;
-        height: 16px;
-        background-color: $darkgreen;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-    }
-
-    /* Titre Principal */
-
-    h2 {
-      font-size: 2.5rem;
-    }
-
-    /* Paragraphe */
-    .slide-description {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    /* Texte Surligné */
-    .slide-highlight {
-      font-size: 1.2rem;
-      line-height: 40px;
-      position: relative;
-      padding-top: 30px;
-      margin-top: 15px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 190px;
-        height: 3px;
-        background-color: $darkgreen;
-      }
-    }
-  }
-  /* Slide Text2 */
-  .slide-texte {
-    flex: 10;
-    margin-left: 300px;
-    margin-bottom: 70px;
-    position: relative;
-    //margin-top: -50px; // Réduit l'espace en haut pour le rapprocher du haut
-    transform: translateY(-70px); // Une autre option pour monter le texte
-
-    .slide-titre {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-
-      .titre-dot {
-        width: 16px;
-        height: 16px;
-        background-color: $darkgreen;
-        border-radius: 50%;
-        margin-right: 10px;
-      }
-    }
-
-    .titre {
-      font-size: 2.5rem; // Ajuste la taille si nécessaire
-    }
-
-    .description {
-      font-size: 1.5rem;
-      line-height: 2;
-      margin-left: 0; // Centrer le texte horizontalement
-      margin-bottom: 0; // Réduit l'espace en bas
-    }
-  }
-
-  /* ========== Flèches de Navigation ========== */
-  .swiper-button-next {
-    position: absolute;
-    top: 70%;
-    transform: translateY(-250%);
-    z-index: 10;
-    cursor: pointer;
-
-    img {
-      width: 60px;
-      height: auto;
-    }
-  }
-  .swiper-button-prev {
-    position: absolute;
-    top: 80%;
-    transform: translateY(-100%);
-    z-index: 10;
-    cursor: pointer;
-
-    img {
-      width: 60px;
-      height: auto;
-    }
-  }
-
-  .swiper-button-prev {
-    left: -200px;
-  }
-
-  .swiper-button-next {
-    right: -200px;
-  }
-
-  /* Contrôles de Slider */
-  .slider-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-    pointer-events: none;
-
-    img {
-      pointer-events: all;
-      width: 40px;
-      height: auto;
-      cursor: pointer;
-    }
-
-    .prev {
-      position: absolute;
-      left: 10px;
-    }
-
-    .next {
-      position: absolute;
-      right: 10px;
-    }
-  }
-}
-/* ===== Media Queries ===== */
-
-/* Desktop: 1920x1080 */
-@media screen and (min-width: 1920px) {
-  /* Swiper Container */
-  .project-slider-first {
-    max-width: 1500px;
-    margin-top: 100px;
+    padding: 0;
   }
 }
 
-/* Notebook: 1366x768 */
-@media screen and (max-width: 1919px) and (min-width: 1366px) {
-  .project-slider-first {
-    max-width: 1300px;
-    margin-top: 100px;
-  }
-  .slide-content-computer .slide-image-container {
-    //position: relative;
-    position: fixed;
-    flex: 20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-/* Tablet: 768x1024 */
-@media screen and (max-width: 1365px) and (min-width: 768px) {
-  .slide-content {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Contenu du slide */
+.content {
+  flex: 1;
+  padding: 20px;
+  max-width: 100%;
+  z-index: 2;
 
-  .computer-image {
+  @include responsive("tablet") {
+    padding: 150px;
     max-width: 50%;
   }
 
-  .leaf-image {
-    left: 0;
-    top: 10%;
+  .icon-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: $darkgreen;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+
+    @include responsive("tablet") {
+      font-size: 2rem;
+    }
+
+    @include responsive("notebook") {
+      font-size: 2.5rem;
+    }
+
+    @include responsive("desktop") {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    @include responsive("tablet") {
+      font-size: 1.2rem;
+    }
+
+    @include responsive("desktop") {
+      font-size: 1.5rem;
+    }
+  }
+
+  .separator {
+    width: 190px;
+    height: 3px;
+    background-color: $darkgreen;
+    border: none;
+    margin: 20px 0;
   }
 }
 
-/* Mobile: 360x800 */
-/* ===== Mobile: 360x800 ===== */
-@media screen and (max-width: 767px) {
-  .project-slider {
-    top: 60px;
+/* Illustration */
+.illustration {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: visible;
 
-    /* Swiper Container */
-    .swiper-container {
-      max-width: 500px;
-      margin: 20px;
-    }
+  @include responsive("tablet") {
+    height: 100%;
+  }
 
-    /* Slide Content */
-    .slide-content {
-      flex-direction: column;
-    }
+  .green-background {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(to right, $lightestgreen, $darkestgreen);
+    border-top-right-radius: 250px;
+    border-bottom-right-radius: 250px;
+    top: 0;
+    z-index: -1;
+    left: -20%;
 
-    /* Slide 1: Computer */
-    .slide-content-computer {
-      .slide-image-container {
-        margin-top: 80px;
-        justify-content: center;
-        align-items: center;
-
-        /* Background Vert */
-        .green-background {
-          width: 100%;
-          height: 140px;
-          background: linear-gradient(to right, $lightestgreen, $darkestgreen);
-          border-top-right-radius: 500px;
-          border-bottom-right-radius: 500px;
-          right: -20%;
-        }
-
-        /* Image Ordinateur */
-        .computer-image {
-          z-index: 1;
-          max-width: 50%;
-          height: auto;
-          margin-top: 80px;
-          margin-right: 50px;
-          margin-left: 20px;
-        }
-
-        /* Image Feuille */
-        .leaf-image {
-          z-index: 2;
-          width: 60%;
-          right: 5px;
-          bottom: 180px;
-          pointer-events: none;
-        }
-      }
-    }
-
-    /* Slide Text */
-    .slide-text {
-      flex-direction: column;
-      text-align: left;
-      margin-top: -430px;
-
-      /* Titre */
-      .slide-title {
-        margin-bottom: 230px;
-      }
-
-      /* Titre Principal */
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      /* Paragraphe */
-      .slide-description {
-        font-size: 1rem;
-      }
-
-      /* Texte Surligné */
-      .slide-highlight {
-        font-size: 1.2rem;
-        padding-top: 30px;
-        margin-top: -15px;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 190px;
-          height: 3px;
-          background-color: $darkgreen;
-        }
-      }
-    }
-    /* Slide Text2 */
-    .slide-texte {
-      //flex-direction: column;
-      //flex: 10;
-      margin-left: -50px;
-      margin-bottom: 70px;
-      //position: relative;
-      //margin-top: -50px; // Réduit l'espace en haut pour le rapprocher du haut
-      transform: translate(
-        35px,
-        -60px
-      ); // Une autre option pour monter le texte
-
-      .slide-titre {
-        //display: flex;
-        align-items: center;
-        //margin-bottom: 30px;
-      }
-
-      .titre {
-        font-size: 1.5rem; // Ajuste la taille si nécessaire
-      }
-
-      .description {
-        text-align: justify;
-        font-size: 1rem;
-        //line-height: 2;
-        //margin-right: auto; // Centrer le texte horizontalement
-        //margin-bottom: 0; // Réduit l'espace en bas
-      }
-    }
-    /* Slide 2: Tree Background */
-    .slide-tree-background {
-      overflow: hidden;
-      z-index: -1;
-      background-image: url("/img/Groupe146.svg");
-      background-repeat: no-repeat;
-      //position: fixed;
-      //margin-left: 100px;
-      background-position: top;
-      background-size: contain;
-      //width: 60%;
-      //top: 150px;
-    }
-
-    /* ========== Flèches de Navigation ========== */
-    .swiper-button-next {
-      //position: relative;
-      top: 38%;
-      margin-left: -100px;
-      //transform: translateY(-250%);
-      //z-index: 10;
-      cursor: pointer;
-
-      img {
-        width: 30px;
-        height: auto;
-      }
-    }
-    .swiper-button-prev {
-      //position: absolute;
-      top: 38%;
-      transform: translateY(-750%);
-      margin-left: -20px;
-      //z-index: 10;
-      cursor: pointer;
-
-      img {
-        width: 30px;
-        height: auto;
-      }
-    }
-
-    .swiper-button-prev {
-      left: 30px;
-    }
-
-    .swiper-button-next {
-      right: 30px;
-    }
-
-    /* Contrôles de Slider */
-    .slider-controls {
-      //position: absolute;
-      top: 50%;
+    @include responsive("tablet") {
       width: 100%;
-
-      justify-content: space-between;
-      transform: translateY(-50%);
-      z-index: 10;
-      pointer-events: none;
-
-      img {
-        pointer-events: all;
-        width: 40px;
-        height: auto;
-        cursor: pointer;
-      }
-
-      .prev {
-        position: absolute;
-        left: 10px;
-      }
-
-      .next {
-        position: absolute;
-        right: 10px;
-      }
+      height: 40%;
+      top: 250px;
+      border-top-right-radius: 500px;
+      border-bottom-right-radius: 500px;
     }
+
+    @include responsive("desktop") {
+      width: 100%;
+      left: -35%;
+    }
+  }
+
+  img {
+    position: relative;
+    z-index: 2;
+    max-width: 50%;
+    height: 70%;
+    margin-top: 50px;
+
+    @include responsive("tablet") {
+      max-width: 100%;
+      margin-top: 150px;
+      margin-left: 30%;
+    }
+
+    @include responsive("desktop") {
+      max-width: 40%;
+    }
+  }
+}
+
+.leaves {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  width: 30%;
+
+  @include responsive("tablet") {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  @include responsive("desktop") {
+    bottom: 40px;
+    right: 50px;
+  }
+
+  .leaf {
+    width: 500px;
+
+    @include responsive("desktop") {
+      width: 50%;
+    }
+  }
+}
+
+/* ========== Flèches de Navigation ========== */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+
+  img {
+    width: 30px;
+    height: 30px;
+
+    @include responsive("tablet") {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include responsive("desktop") {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &.left {
+    left: 10px;
+  }
+
+  &.right {
+    right: 10px;
+  }
+}
+
+#prevSlide {
+  display: none;
+}
+
+#nextSlide {
+  right: 10px;
+}
+
+/* Styles spécifiques pour chaque slide */
+#slide1 {
+  .illustration {
+    order: 1;
+  }
+  .content {
+    order: 2;
+  }
+
+  @include responsive("tablet") {
+    flex-direction: row;
+  }
+
+  #nextSlide {
+    display: block;
+    right: 10px;
+  }
+}
+
+#slide2 {
+  .illustration {
+    order: 1;
+  }
+  .content {
+    order: 2;
+  }
+
+  @include responsive("tablet") {
+    flex-direction: row-reverse;
+
+    .illustration {
+      order: 2;
+    }
+    .content {
+      order: 1;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+    @include responsive("tablet") {
+      max-width: 50%;
+    }
+  }
+
+  #prevSlide {
+    display: block;
+    left: 10px;
+  }
+
+  #nextSlide {
+    display: none;
+  }
+}
+
+/* Ajout de la classe tree-image */
+.tree-image {
+  position: relative;
+  width: 1000vh;
+  height: auto;
+  top: 10px;
+  z-index: 1;
+
+  @include responsive("tablet") {
+    width: 2000px;
+    height: 2%;
+    size: 80% auto;
   }
 }

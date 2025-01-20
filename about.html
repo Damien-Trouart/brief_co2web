@@ -39,84 +39,74 @@
         </div>
       </nav>
     </header>
-    <main id="main-about">
-      <!-- Premier slider -->
-      <section class="project-slider project-slider-first">
-        <div class="swiper-container">
-          <section class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="slide-content slide-content-computer">
-                <div class="slide-image-container">
-                  <div class="green-background"></div>
-                  <img
-                    src="img/Groupe40.svg"
-                    alt="Illustration ordinateur"
-                    class="computer-image"
-                  />
-                  <img
-                    src="img/Groupe56.svg"
-                    alt="Illustration feuille"
-                    class="leaf-image"
-                  />
-                </div>
-
-                <div class="slide-text">
-                  <div class="slide-title">
-                    <span class="title-dot"></span>
-                    <h2>À propos du projet</h2>
-                  </div>
-                  <p class="slide-description">
-                    Arcu, ultrices amet, ac rhoncus eget egestas diam a
-                    malesuada tristique blandit elementum dapibus proin pretium
-                    rhoncus, viverra sagittis libero, libero varius accumsan
-                    ridiculus amet nam duis sit vestibulum nibh eget ultrices
-                    magna facilisis potenti
-                  </p>
-                  <p class="slide-highlight">
-                    Aenean egestas fermentum <br />at elementum ut ut eu,
-                    feugiat sit feugiat morbi id ipsum tincidunt
-                  </p>
-                  <div class="swiper-button-next">
-                    <img src="img/arrowone.png" alt="Flèche droite" />
-                  </div>
+    <main>
+      <div class="slider-container">
+        <div class="slider">
+          <!-- Slide 1 -->
+          <div class="slide" id="slide1">
+            <div class="content">
+              <div class="icon-title">
+                <span class="dot"></span>
+                <h1>À propos du projet</h1>
+              </div>
+              <p>
+                Arcu, ultrices amet, ac rhoncus eget egestas diam<br />
+                a malesuada tristique blandit elementum dapibus<br />
+                proin pretium rhoncus, viverra sagittis libero, libero varius<br />
+                accumsan ridiculus amet nam duis sit vestibulum nibh eget<br />
+                ultrices magna facilisis potenti
+              </p>
+              <hr class="separator" />
+              <p>
+                Aenean egestas fermentum, at elementum ut ut eu, feugiat<br />
+                sit feugiat morbi id ipsum tincidunt.
+              </p>
+            </div>
+            <div class="illustration">
+              <div class="green-background">
+                <img
+                  src="img/Groupe40.svg"
+                  alt="Illustration d'un ordinateur"
+                />
+                <div class="leaves">
+                  <!-- Feuilles décoratives -->
+                  <img src="img/Groupe56.svg" alt="Feuille" class="leaf" />
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </section>
+          </div>
 
-      <!-- Deuxième slider -->
-      <section class="project-slider project-slider-second">
-        <div class="swiper-container">
-          <section class="swiper-wrapper">
-            <!-- Slide 2 -->
-            <div class="swiper-slide slide-tree-background">
-              <div class="slide-content slide-content-tree">
-                <div class="slide-texte">
-                  <div class="slide-titre">
-                    <span class="titre-dot"></span>
-                    <h2 class="titre">À propos du projet</h2>
-                  </div>
-
-                  <p class="description">
-                    Arcu, ultrices amet, ac rhoncus eget egestas diam a<br />
-                    malesuada tristique blandit elementum dapibus proin<br />
-                    pretium rhoncus, viverra sagittis libero, libero varius<br />
-                    accumsan ridiculus amet nam duis sit vestibulum nibh<br />
-                    eget ultrices magna facilisis potenti
-                  </p>
-
-                  <div class="swiper-button-prev">
-                    <img src="img/arrow.png" alt="Flèche gauche" />
-                  </div>
-                </div>
+          <!-- Slide 2 -->
+          <div class="slide" id="slide2">
+            <div class="content">
+              <div class="icon-title">
+                <span class="dot"></span>
+                <h1>À propos du projet</h1>
               </div>
+              <p>
+                Arcu, ultrices amet, ac rhoncus eget egestas diam a malesuada
+                tristique blandit elementum dapibus proin pretium rhoncus,
+                viverra sagittis libero, libero varius accumsan ridiculus amet
+                nam duis sit vestibulum nibh eget ultrices magna facilisis
+                potenti
+              </p>
             </div>
-          </section>
+            <img
+              src="/img/Groupe146.svg"
+              alt="Illustration de slide 2"
+              class="tree-image"
+            />
+          </div>
         </div>
-      </section>
+
+        <!-- Navigation -->
+        <button class="arrow left" id="prevSlide">
+          <img src="img/arrow.png" alt="Flèche gauche" />
+        </button>
+        <button class="arrow right" id="nextSlide">
+          <img src="img/arrowone.png" alt="Flèche droite" />
+        </button>
+      </div>
     </main>
 
     <footer id="footer-about" class="footer">

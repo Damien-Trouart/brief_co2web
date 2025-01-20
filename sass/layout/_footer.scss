@@ -48,7 +48,6 @@
 }
 
 @media (max-width: 768px) and (min-width: 700px) {
-
   #footer_contact {
     position: relative;
   }
@@ -75,11 +74,9 @@
         margin: 0;
         justify-content: center;
 
-
         & li {
           padding-bottom: 1rem;
           padding-right: 1rem; //permettre un espace entre chaque lien
-
 
           & a {
             font-size: 1.2rem;
@@ -91,7 +88,6 @@
 }
 
 @media (max-width: 360px) {
-
   #footer_calculator {
     position: relative;
   }
@@ -105,7 +101,7 @@
   }
 
   #footer-about {
-    background-color: $primary-color;
+    background-color: transparent;
   }
 
   .footer {
