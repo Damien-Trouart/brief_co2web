@@ -38,7 +38,7 @@ function plusSlides(n) {
   updateDots();
 }
 
-// Sync carousel with scroll position
+// avoir le carousel accordé avec la position de scroll
 carousel.addEventListener('scroll', () => {
   const width = carousel.clientWidth;
   const index = Math.round(carousel.scrollLeft / width);
